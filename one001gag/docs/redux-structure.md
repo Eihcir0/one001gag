@@ -1,5 +1,8 @@
 # Redux Structure
 
+
+I HAVEN'T STARTED THIS YET. NEED TO UNDERSTAND REDUX MORE
+
 The application's state is organized by data type. Under each data type, there
 may be sub-states. Each action is listed with the sequence of events that
 results from its invocation, ending with the API or a reducer. Subscribed

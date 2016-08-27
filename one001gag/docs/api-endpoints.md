@@ -19,33 +19,27 @@
 - `DELETE /api/session`
 - `GET /api/session`
 
-### Notes
+### Posts
 
-- `GET /api/notes`
-  - Notes index/search
+- `GET /api/posts`
+  - posts index
   - accepts `tag_name` query param to list notes by tag
   - accepts pagination params (if I get there)
-- `POST /api/notes`
-- `GET /api/notes/:id`
-- `PATCH /api/notes/:id`
-- `DELETE /api/notes/:id`
+  - calculates total UpVotes/DownVotes and Comments (NEED HELP WITH THIS!!!)
 
-### Notebooks
+- `POST /api/posts`
+- `GET /api/post/:id`
+  - calculates total UpVotes/DownVotes and Comments (NEED HELP WITH THIS!!!)
+  - new comment form
+  - shows nested comments index
 
-- `GET /api/notebooks`
-- `POST /api/notebooks`
-- `GET /api/notebooks/:id`
-- `DELETE /api/notebooks/:id`
-- `GET /api/notebooks/:id/notes`
-  - index of all notes for a notebook
+### Comments
+
+- `POST /api/post/:id/comments`
+  - index of all comments for a post
   - accepts pagination params (if I get there)
+- `GET /api/notebooks/:id`
 
 ### Tags
 
-- A note's tags will be included in the note show template
-- `GET /api/tags`
-  - includes query param for typeahead suggestions
-- `POST /api/notes/:note_id/tags`: add tag to note by name
-  - if note doesn't already exist, it will be created
-- `DELETE /api/notes/:note_id/tags/:tag_name`: remove tag from note by
-  name
+- Hmmmm. not really sure how to handle this from the api

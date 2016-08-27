@@ -5,7 +5,7 @@
 [heroku]: http://www.9gag.com
 
 What is one001gag?
- - full-stack, single-page web application
+ - full-stack, `single-page` web application
  - inspired by 9gag
  - (but containing only tech/computer humor - `1001 is binary for 9!`)
  - `Ruby on Rails` backend
@@ -14,7 +14,7 @@ What is one001gag?
 
 ## Features & Implementation
 
-### Single-Page App
+### Auths
 
  - Root page listens to a `SessionStore` and renders content based on a call to `SessionStore.currentUser()`
  - API call to `SessionsController#get_user` keeps password and sensitive information out of the frontend

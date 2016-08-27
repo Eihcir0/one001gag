@@ -1,21 +1,30 @@
-# FresherNote
+# one001gag
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
+[one001gag live][heroku]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://www.9gag.com
+
+What is one001gag?
+ - full-stack, `single-page` web application
+ - inspired by 9gag
+ - (but containing only tech/computer humor - `1001 is binary for 9!`)
+ - `Ruby on Rails` backend
+ - `PostgreSQL` database
+ - `React.js with Redux` on the frontend.  
+
 
 ## Minimum Viable Product
 
-FresherNote is a web application inspired by Evernote built using Ruby on Rails and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+`one001gag` is a web application inspired by 9gag built using Ruby on Rails and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, entertaining seed data and sufficient CSS styling:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Notes
-- [ ] Notebooks for organizing notes
+- [ ] Feed displays posts
+- [ ] Post detail displays nested comments
+- [ ] UpVotes/DownVotes on comments and posts
 - [ ] Tags
-- [ ] Rich Text Editing
 - [ ] Infinite Scroll
-- [ ] Production README [sample](docs/production_readme.md) 
+- [ ] Production README [sample](docs/production_readme.md)
 
 ## Design Docs
 * [View Wireframes][wireframes]
@@ -53,68 +62,50 @@ FresherNote is a web application inspired by Evernote built using Ruby on Rails 
 - [ ] Seed users
 - [ ] Review phase 1
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Posts Model, API, and components (2 days)
 
-**Objective:** Notes can be created, read, edited and destroyed through
+**Objective:** Posts can be created, read, edited and destroyed through
 the API.
 
-- [ ] `Note` model
+- [ ] `Post` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for notes (`NotesController`)
-- [ ] JBuilder views for notes
-- Note components and respective Redux loops
-  - [ ] `NotesIndex`
-  - [ ] `NoteIndexItem`
-  - [ ] `NoteForm`
-- [ ] Autosave notes feature
-- [ ] Style notes components
-- [ ] Seed notes
+- [ ] CRUD API for posts (`PostsController`)
+- [ ] JBuilder views for posts
+- Post components and respective Redux loops
+  - [ ] `PostsIndex`
+  - [ ] `PostIndexItem`
+  - [ ] `PostCreateForm`
+- [ ] Style posts components
+- [ ] Seed posts
 
-### Phase 3: Notebooks (2 day)
+### Phase 3: Comments (2 days)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Comments belong to Posts that can be created, or read through the API.
 
-- [ ] `Notebook` model
+- [ ] `Comment` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for notes (`NotebooksController`)
-- [ ] JBuilder views for notebooks
-- [ ] Adding notes requires a notebook
-- [ ] Moving notes between notebooks
-- [ ] Viewing notes by notebook
-- [ ] Style notebook components
-- [ ] Seed notebooks
+- [ ] CRUD API for comments (`CommentsController`)
+- [ ] JBuilder views for comments
+- [ ] Style comment components
+- [ ] Seed comments
 
-### Phase 4: Tags (1 days)
+### Phase 4: Votes (2 days)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**Objective:** Votes belong to Posts that can be created, or read through the API.
+
+- [ ] `Vote` model
+- [ ] Seed database with a small amount of test data
+- [ ] CRUD API for votes (`VotesController`)
+
+### Phase 5: Tags (1 days)
+
+**Objective:** Posts can be tagged with multiple tags
 
 - [ ] `Tag` model and `Taggings` join table
-- [ ] Fetching tags for notes
-- [ ] Adding tags to notes
-- [ ] Searching notes by tag
-- [ ] Style search & tag components
+- [ ] Fetching tags for posts
+- [ ] Adding tags to posts
+- [ ] Searching posts by tag
 - [ ] Seed tags with seed data
 
-### Phase 5: Allow Complex Styling in Notes (1 days, W2 Th 6pm)
-
-**objective:** Allow rich text editing of notes.
-
-- [ ] Integrate `react-quill` (based on Quill.js).
-- [ ] Rails helpers to sanitize HTML before rendering.
-- [ ] Style Quill components.
-- [ ] Add Quill styling to seeded notes
-
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
-
-**objective:** Add infinite scroll to Notes Index
-
-- [ ] Paginate Notes Index API to send 20 results at a time
-- [ ] Append next set of results when user scrolls and is near bottom
-- [ ] Style scroll components and transitions
-- [ ] Ensure seed data demonstrates infinite scroll
 
 ### Bonus Features (TBD)
-- [ ] Search notes by content
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
