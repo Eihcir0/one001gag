@@ -1,20 +1,15 @@
-## Component Heirarchy
-
-**AuthFormContainer**
- - AuthForm
+## Component Hierarchy
 
 **HomeContainer**
- - Home
  - Login/Sign-Up
  - Guest Login
- - Cool background / gif
+
 
 **FeedContainer**
  - Header
   * Index
 
 **PostContainer**
- - Header
   + Post detail
   + Comments
 
@@ -26,9 +21,8 @@
 
 |Path   | Component   |
 |-------|-------------|
-| `/sign-up` | `authFormContainer` |
-| `/sign-in` | `authFormContainer` |
-| `/home` | `homeContainer` |
+| `/sign-up` | `homeContainer` |
+| `/sign-in` | `homeContainer` |
 | `/home/index` | `feedContainer` |
 | `/home/post/:postId/` | `detailContainer` |
 | `/home/post/:postId/newComment` | `newCommentContainer` |

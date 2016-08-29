@@ -80,17 +80,6 @@ to be edited:
 
 
 
-### Tags
-
-  - Stored in db as tags table with only one field:
-    - `name`
-
-### Taggings
-  - A join table with fields:
-    - `post_id`
-    - `user_id`
-
-```
 
 ## Future Directions for the Project
 
