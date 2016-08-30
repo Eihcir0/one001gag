@@ -7,7 +7,13 @@ export const App = ({children}) => {
   return (
   <div>
     <header>
-      <h1>one001gag</h1>
+      <h1 className="title-page">
+        one
+      <br/>
+        001
+        <br/>
+        gag
+      </h1>
     </header>
     {children}
   </div>

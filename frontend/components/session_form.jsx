@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
-export class sessionForm extends React.Component {
+class SessionForm extends React.Component {
 	constructor(props){
-    debugger
 		super(props);
 		this.state = {
 			username: "",
 			password: ""
 		};
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleLogin = this.handleLogin.bind(this);
+		this.handleSignin = this.handleSignin.bind(this);
 	}
 
 	componentDidUpdate(){
@@ -17,7 +17,7 @@ export class sessionForm extends React.Component {
 	}
 
 	redirectIfLoggedIn(){
-		if (this.props.loggedIn){
+		if (this.props.currentUser){
 			hashHistory.push("/");
 		}
 	}
@@ -26,21 +26,22 @@ export class sessionForm extends React.Component {
 		return e => { this.setState({[field]: e.currentTarget.value }); };
 	}
 
-	handleSubmit(e){
+	handleLogin(e){
 		e.preventDefault();
 		const user = this.state;
-		this.props.processForm({user});
+		this.props.logIn(user);
+	}
+	handleSignin(e){
+		e.preventDefault();
+		const user = this.state;
+		console.log(e);
+		console.log(user);
+		this.props.signUp(user);
 	}
 
-	navLink(){
-		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
-		} else {
-			return <Link to="/login">log in instead</Link>;
-		}
-	}
 
 	renderErrors(){
+		if (this.props.errors) {
 		return(
 			<ul>
 				{this.props.errors.map( (error, i) => (
@@ -49,42 +50,44 @@ export class sessionForm extends React.Component {
 					</li>
 				))}
 			</ul>
-		);
+		);}
 	}
 
 	render() {
 		return (
 			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to one001gag - form title
-					<br/>
-					Please { this.props.formType } or { this.navLink() }
-					{ this.renderErrors() }
-					<div className="login-form">
-						<br />
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
+			  <form className="login-form-box">
+			    <br/>
+			    { this.renderErrors() }
+			    <div className="login-form">
+			      <br />
+			      <label> Username:
+			        <input type="text"
+			          value={this.state.username}
+			          onChange={this.update("username")}
+			          className="login-input" />
+			      </label>
 
-						<br />
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
+			      <br />
+			      <label> Password:
+			        <input type="password"
+			          value={this.state.password}
+			          onChange={this.update("password")}
+			          className="login-input" />
+			      </label>
 
-						<br />
-						<input type="submit" value="Submit" />
-					</div>
-				</form>
+			      <br />
+						<button onClick={this.handleLogin} className="login-button" name="login button">LOGIN!
+						</button>
+						<button onClick={this.handleSignin} className="sign-up-button" name="button">
+							SIGN-UP
+						</button>
+			    </div>
+			  </form>
 			</div>
 		);
 	}
 
 }
 
-// export default sessionForm;
+export default SessionForm;

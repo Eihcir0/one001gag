@@ -1,11 +1,9 @@
 import React from 'react';
-import sessionForm from './session_form';
+import SessionContainer from './session_container';
 
 export const home = () => (
   <div>
-      <h3> home container title</h3>
-      <h1> your logo here</h1>
-      <h4> funny gif playing </h4>
-      <sessionForm/>
+      <img className="opening-gif" src="http://s0.thejournal.ie/media/2013/04/computer-rage.gif" alt="" />
+      <SessionContainer/>
   </div>
 );

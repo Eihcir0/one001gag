@@ -6,17 +6,22 @@
  - Header
   - Upload form (modal)
 
-**Home Container**
-- Login/Sign-Up
-- Guest Login
-
- - depending on route:
-  - `Index Container` (see below)
+  - depending on route:
+  - `Home Container` 
 
   OR
-  - `Index Item Detail Container`
+  - `Index Container`
+
+  OR
+   - `Index Item Detail Container`
 
 
+
+**Home Container**
+- Session Container
+  - Session Form
+      - Login/Sign-Up
+      - Guest Login
 
 **Index Container**
   - Index

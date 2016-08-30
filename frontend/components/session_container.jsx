@@ -1,8 +1,9 @@
+///coppied from benchbnb
 
 import { connect } from 'react-redux';
 import {logIn} from './../actions/session_actions.js';
 import {signUp} from './../actions/session_actions.js';
-import {home} from './home';
+import SessionForm from './session_form.jsx';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser
@@ -16,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(home);
+)(SessionForm);

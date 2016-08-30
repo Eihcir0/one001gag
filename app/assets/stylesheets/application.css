@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+button {
+  background-color: #grey;
+  border: 1px solid grey;
+  margin: 10 px;
+  color: #fff;
+  padding: 6px;
+}
+
+.login-form {
+  border: 1px solid #aaa;
+  margin: 0 auto;
+  padding: 1rem 1rem 1rem 6rem;
+  width: 28%;
+}
+
+.login-form input {
+  padding: 5px;
+}
