@@ -8,12 +8,12 @@ export const SessionMiddleware = ({getState, dispatch}) => next => action => {
     case "LOGIN":
       success = data => dispatch(Actions.receiveCurrentUser(data));
       errors = response => Actions.receiveErrors(response);
-      API.logIn(success);
+      API.logIn({user: action.user},success);
       break;
     case "SIGNUP":
       success = data => dispatch(Actions.receiveCurrentUser(data));
       errors = response => Actions.receiveErrors(response);
-      API.signUp(success);
+      API.signUp({user: action.user}, success);
       break;
     case "LOGOUT":
       success = data => next(action);

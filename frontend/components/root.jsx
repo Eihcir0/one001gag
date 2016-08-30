@@ -3,6 +3,6 @@ import { Provider } from 'react-redux';
 
 export const Root = ({ store }) => (
   <Provider store={store}>
-    <DIV> one001gag</DIV>
+    <h1> one001gag</h1>
   </Provider>
 );

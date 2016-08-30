@@ -20,7 +20,7 @@ export const logIn = (user, success, errors) => {
 
 export const logOut = (success, errors) => {
   $.ajax({
-    type: "POST",
+    type: "DELETE",
     url: "api/session",
     success,
     errors,
