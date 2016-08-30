@@ -19,11 +19,12 @@ What is one001gag?
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Feed displays posts
-- [ ] Post detail displays nested comments
+- [ ] Feed displays posts, comment count, vote count
+- [ ] Post detail displays
+  - [ ] nested comments
+  - [ ] new comment form
+  - [ ] reply to comments
 - [ ] UpVotes/DownVotes on comments and posts
-- [ ] Tags
-- [ ] Infinite Scroll
 - [ ] Production README [sample](docs/production_readme.md)
 
 ## Design Docs
@@ -52,12 +53,12 @@ What is one001gag?
 - [ ] New Rails project
 - [ ] `User` model/migration
 - [ ] Back end authentication (session/password)
-- [ ] `StaticPages` controller and root view
+- [ ] `StaticPage` controller and root view
 - [ ] Webpack & react/redux modules
 - [ ] `APIUtil` to interact with the API
 - [ ] Redux cycle for frontend authentication
 - [ ] User signup/signin components
-- [ ] Blank landing component after signup/signin
+- [ ] Redirect to blank landing component after signup/signin
 - [ ] Style signup/signin components
 - [ ] Seed users
 - [ ] Review phase 1
@@ -69,7 +70,7 @@ the API.
 
 - [ ] `Post` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for posts (`PostsController`)
+- [ ] CR API for posts (`PostsController`)
 - [ ] JBuilder views for posts
 - Post components and respective Redux loops
   - [ ] `PostsIndex`
@@ -85,7 +86,7 @@ the API.
 - [ ] `Comment` model
 - [ ] Seed database with a small amount of test data
 - [ ] CRUD API for comments (`CommentsController`)
-- [ ] JBuilder views for comments
+- [ ] Update JBuilder view for comment posts to include comments
 - [ ] Style comment components
 - [ ] Seed comments
 
@@ -96,16 +97,8 @@ the API.
 - [ ] `Vote` model
 - [ ] Seed database with a small amount of test data
 - [ ] CRUD API for votes (`VotesController`)
+- [ ] Update JBuilder view for comment posts to include vote totals and currentUserVote
 
-### Phase 5: Tags (1 days)
-
-**Objective:** Posts can be tagged with multiple tags
-
-- [ ] `Tag` model and `Taggings` join table
-- [ ] Fetching tags for posts
-- [ ] Adding tags to posts
-- [ ] Searching posts by tag
-- [ ] Seed tags with seed data
 
 
 ### Bonus Features (TBD)
