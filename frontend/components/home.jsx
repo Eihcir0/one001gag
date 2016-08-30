@@ -1,6 +1,6 @@
 import React from 'react';
 import sessionForm from './session_form';
-//test
+
 export const home = () => (
   <div>
       <h3> home container title</h3>
