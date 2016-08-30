@@ -1,14 +1,14 @@
 ## Component Hierarchy
 
-**Home Container**
- - Login/Sign-Up
- - Guest Login
 
 
 **App Container**
  - Header
   - Upload form (modal)
 
+**Home Container**
+- Login/Sign-Up
+- Guest Login
 
  - depending on route:
   - `Index Container` (see below)
@@ -19,6 +19,7 @@
 
 
 **Index Container**
+  - Index
   - Index Item
   - Index Item Info
 
