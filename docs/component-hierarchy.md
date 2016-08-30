@@ -1,25 +1,40 @@
 ## Component Hierarchy
 
-**HomeContainer**
+**Home Container**
  - Login/Sign-Up
  - Guest Login
 
 
-**AppContainer**
+**App Container**
  - Header
   - Upload form (modal)
+
+
  - depending on route:
-  - Index
-  - Show
+  - `Index Container` (see below)
 
-
-**IndexContainer**
-  + Index item
+  OR
+  - `Index Item Detail Container`
 
 
 
-**NewPostContainer**
- - NewPost
+**Index Container**
+  - Index Item
+  - Index Item Info
+
+
+**Index Item Detail Container**
+- Index Item Detail
+- Index Item Info
+- New Comment Form
+- Comments Index
+  - Comments Index Item
+  - Comments Index Item Info
+
+
+
+**New Post Container**
+ - New Post
 
 ## Routes
 
@@ -29,3 +44,4 @@
 | `/sign-in` | `homeContainer` |
 | `/` | `indexContainer` |
 | `/:postId/` | `detailContainer` |
+| `/:postId/comments` | `commentsIndex` |

@@ -1,12 +1,12 @@
 ```json
 {
-  currentUser: {
+  session: {
+    currentUser: {
     id: 1,
-    username: "Richie Humphrey"
+    username: "Richie Humphrey",
+    errors: [],
   },
   forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
     createPost: {errors: ["can't be blank"]}
   },
   posts: {

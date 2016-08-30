@@ -22,11 +22,11 @@
 
 - `GET /api/posts`
   - posts index
-  - calculates total UpVotes/DownVotes and Comments (NEED HELP WITH THIS!!!)
+  - calculates total UpVotes/DownVotes and comments
 
 - `POST /api/posts`
 - `GET /api/post/:id`
-  - calculates total UpVotes/DownVotes and Comments (NEED HELP WITH THIS!!!)
+  - calculates total UpVotes/DownVotes and total comments
   - new comment form
   - shows nested comments index
 

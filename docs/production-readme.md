@@ -37,11 +37,10 @@ class Api::SessionsController < ApplicationController
 
 to be edited:
 
-  - #index renders the feed which is a container of post-index-items that are loaded to the front-end 10 items at a time.  The post data is stored in one table with the following fields:
+  - #index renders the feed which is a container of index-items that are loaded to the front-end.  The post data is stored in one table with the following fields:
+    - `id`
     - `title`
-    - `image_id`
-    - `URL`
-    - `NSFW` (boolean)
+    - `image_url`
     - `user_id`
 
 
@@ -60,11 +59,12 @@ to be edited:
 
 
 
-### Posts
+### IndexItemDetail
 
   - #show renders a single post with comments nested.  Comments table contains the following fields:
     - `content`
     - `user_id`
+    - 'commentable_id' (comment or )
 
 ![image of show](wireframes/show.png)!
 
