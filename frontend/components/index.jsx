@@ -8,10 +8,13 @@ class Index extends React.Component {
   }
 
   render() {
-    let posts = this.props.posts;
-    debugger;
+    let posts = this.props.posts.posts;
+    let keys = Object.keys(posts);
+    let postsArray = keys.map((key) => ({id: key, title: posts[key].title, url: posts[key].image_url}));
+    let displayArray = [];
     return(
       <div>
+        {displayArray}
       </div>
     );
   }
