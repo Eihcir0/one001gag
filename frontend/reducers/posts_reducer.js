@@ -1,10 +1,10 @@
 import { merge } from 'lodash';
 
 export const PostsReducer =
-  (state = {}, action) => {
+  (state = {posts: {}}, action) => {
    switch(action.type){
      case "RECEIVE_POSTS":
-      return merge ({},action.posts);
+      return merge ({}, {posts: action.posts});
 
      default:
        return state;
