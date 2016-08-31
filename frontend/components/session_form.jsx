@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
 		};
 		this.handleLogin = this.handleLogin.bind(this);
 		this.handleSignin = this.handleSignin.bind(this);
+		this.handleGuestSignin = this.handleGuestSignin.bind(this);
 	}
 
 	componentDidUpdate(){
@@ -34,9 +35,13 @@ class SessionForm extends React.Component {
 	handleSignin(e){
 		e.preventDefault();
 		const user = this.state;
-		console.log(e);
-		console.log(user);
 		this.props.signUp(user);
+	}
+
+	handleGuestSignin(e){
+		e.preventDefault();
+		const user = {username: "Guest", password: "password123"};
+		this.props.logIn(user);
 	}
 
 
@@ -59,27 +64,31 @@ class SessionForm extends React.Component {
 			<div className="login-form-container">
 			  <form className="login-form-box">
 			    <div className="login-form">
-			      <label> Username:
+			      <label>
+							<span>Username:</span>
 			        <input type="text"
 			          value={this.state.username}
 			          onChange={this.update("username")}
 			          className="login-input" />
-			      </label>
-			      <label> Password:
+						</label><br />
+			      <label>
+							<span>Password:</span>
 			        <input type="password"
 			          value={this.state.password}
 			          onChange={this.update("password")}
 			          className="login-input" />
-			      </label>
-						<button onClick={this.handleLogin} className="login-button" name="login button">login
-						</button>
-						<button onClick={this.handleSignin} className="sign-up-button" name="button">
-							sign-up
-						</button>
-						<button onClick={this.handleSignin} className="guest-in-button" name="button">
-							GUEST LOGIN!
-						</button>
+						</label><br />
+						<div className="button-container">
+							<button onClick={this.handleLogin} className="login-button" name="login button">login
+							</button>
+							<button onClick={this.handleSignin} className="sign-up-button" name="button">
+								sign-up
+							</button>
+						</div>
 			    </div>
+					<button onClick={this.handleGuestSignin} className="guest-in-button" name="button">
+						GUEST LOGIN!
+					</button>
 			  </form>
 				{ this.renderErrors() }
 			</div>

@@ -14,6 +14,10 @@
  *= require_self
  */
 
+* {
+  position: relative;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Exo 2', sans-serif;
@@ -26,13 +30,84 @@ button {
   padding: 6px;
 }
 
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.login-form-container {
+  display: inline-block;
+  /*width: 40%;*/
+}
+
+.login-form-box {
+}
+
 .login-form {
   border: 1px solid #aaa;
-  margin: 0 auto;
-  padding: 1rem 1rem 1rem 6rem;
-  width: 28%;
+  padding: 3.5rem;
+  margin-bottom: 23px;
+}
+
+.login-form label {
+  /*display: block;*/
+}
+
+.login-form label span {
+  width: 70px;
+  display: inline-block;
 }
 
 .login-form input {
   padding: 5px;
+  margin-left: 20px;
+}
+
+.guest-in-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #92d892;
+  padding: 12px 18px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.button-container {
+  text-align: right;
+  margin-top: 12px;
+}
+
+.button-container button {
+  display: inline-block;
+}
+
+.login-button {
+  margin-right: 10px;
+}
+
+.opening-gif {
+  display: block;
+  width: 48%;
+  height: 80%;
+}
+
+.title-logo {
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.navbar {
+  padding: 10px 45px;
+  margin-bottom: 50px;
+}
+
+.tagline {
+  font-size: 45px;
 }

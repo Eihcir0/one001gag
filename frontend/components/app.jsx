@@ -6,15 +6,16 @@ import { Link } from 'react-router';
 export const App = ({children}) => {
   return (
   <div>
-    <header>
-      <h1 className="title-page">
+    <nav className="navbar flex">
+      <h1 className="title-logo">
         one
       <br/>
         001
         <br/>
         gag
       </h1>
-    </header>
+      <span className="tagline">GO FN() YOURSELF!</span>
+    </nav>
     {children}
   </div>
 );};
