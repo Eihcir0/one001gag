@@ -5,7 +5,6 @@ export const SessionMiddleware = ({getState, dispatch}) => next => action => {
   let successCallback = data => dispatch(Actions.receiveCurrentUser(data));
   let errorCallback = xhr => {
     let errors = xhr.responseJSON;
-    debugger;
     dispatch(Actions.receiveErrors(errors));
   };
   switch (action.type) {

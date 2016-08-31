@@ -54,36 +54,34 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
+		console.log(this.props);
 		return (
 			<div className="login-form-container">
 			  <form className="login-form-box">
-			    <br/>
-			    { this.renderErrors() }
 			    <div className="login-form">
-			      <br />
 			      <label> Username:
 			        <input type="text"
 			          value={this.state.username}
 			          onChange={this.update("username")}
 			          className="login-input" />
 			      </label>
-
-			      <br />
 			      <label> Password:
 			        <input type="password"
 			          value={this.state.password}
 			          onChange={this.update("password")}
 			          className="login-input" />
 			      </label>
-
-			      <br />
-						<button onClick={this.handleLogin} className="login-button" name="login button">LOGIN!
+						<button onClick={this.handleLogin} className="login-button" name="login button">login
 						</button>
 						<button onClick={this.handleSignin} className="sign-up-button" name="button">
-							SIGN-UP
+							sign-up
+						</button>
+						<button onClick={this.handleSignin} className="guest-in-button" name="button">
+							GUEST LOGIN!
 						</button>
 			    </div>
 			  </form>
+				{ this.renderErrors() }
 			</div>
 		);
 	}

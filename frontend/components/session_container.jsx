@@ -6,7 +6,8 @@ import {signUp} from './../actions/session_actions.js';
 import SessionForm from './session_form.jsx';
 
 const mapStateToProps = state => ({
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  errors: state.session.errors
 });
 
 const mapDispatchToProps = dispatch => ({
