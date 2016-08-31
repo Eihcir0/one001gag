@@ -4,8 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 //Components
 import {App} from './app';
 import homeContainer from './home_container';
-import {index} from './index';
-// ^^ This will be replaced by indexContainer
+import indexContainer from './index_container.jsx';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -34,7 +33,7 @@ class AppRouter extends React.Component{
     return(
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
-          <IndexRoute component={ index } onEnter={ this._ensureLoggedIn } />
+          <IndexRoute component={ indexContainer } onEnter={ this._ensureLoggedIn } />
           <Route path="/login" component={ homeContainer }
               onEnter={this._redirectIfLoggedIn}/>
           </Route>

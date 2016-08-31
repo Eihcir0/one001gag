@@ -20,10 +20,11 @@
 }
 
 body {
+  /*width: 900px;*/
   font-family: 'Exo 2', sans-serif;
 }
 button {
-  background-color: #grey;
+  
   border: 1px solid grey;
   margin: 10 px;
   color: #fff;
@@ -46,7 +47,7 @@ button {
 
 .login-form {
   border: 1px solid #aaa;
-  padding: 3.5rem;
+  padding: 30px;
   margin-bottom: 23px;
 }
 
@@ -88,7 +89,7 @@ button {
 
 .opening-gif {
   display: block;
-  width: 48%;
+  width: 55%;
   height: 80%;
 }
 

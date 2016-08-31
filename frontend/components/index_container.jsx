@@ -1,17 +1,16 @@
 // PLACE HOLDER !!! THIS HAS NOT BEEN UPDATED
 import { connect } from 'react-redux';
-import {index} from './index';
-
+import Index from './index';
+import {requestPosts} from './../actions/posts_actions';
 const mapStateToProps = state => ({
-  currentUser: state.session.currentUser
+  posts: state.posts
 });
 
 const mapDispatchToProps = dispatch => ({
-  logIn: (user) => dispatch(logIn(user)),
-  signUp: (user) => dispatch(signUp(user))
+  requestPosts: () => dispatch(requestPosts())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(index);
+)(Index);
