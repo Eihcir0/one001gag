@@ -1,5 +1,57 @@
 @import url("normalize.css");
+@keyframes shrink {
+  0% {
+    transform: scale(2);
+    margin-top: 60px;
+    padding-left: 130px;
+    opacity: 1;
+  }
+  91% {
+    transform: scale(2);
+    margin-top: 60px;
+    opacity: 1;
+    padding-left: 130px;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
 
+  80% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  95% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounceIn2 {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+
+  }
+
+  95% {
+    transform: scale(0.5);
+    opacity: 1;
+
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+
+  }
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -20,6 +72,8 @@
 * {
   position: relative;
   box-sizing: border-box;
+  background-color: #ffffcc;
+
 }
 
 body {
@@ -27,6 +81,11 @@ body {
   font-family: 'Exo 2', sans-serif;
 }
 
+.title-logo {
+
+  width: 15%;
+  height: 15%;
+}
 ol, ul {
   list-style: none;
 }
@@ -47,6 +106,9 @@ button {
 }
 
 .login-form-container {
+  animation-duration: 3.5s;
+  animation-name: bounceIn;
+
   display: inline-block;
   /*width: 40%;*/
 }
@@ -75,6 +137,7 @@ button {
 }
 
 .guest-in-button {
+  transition: all 0.5s ease;
   display: block;
   margin: 0 auto;
   background-color: #92d892;
@@ -82,6 +145,14 @@ button {
   font-size: 14px;
   border-radius: 4px;
 }
+
+.guest-in-button:hover {
+  padding: 24px 36px;
+  border-radius: 30px;
+  background-color: #5DFC0A;
+  transform: rotate(1080deg);
+}
+
 
 .button-container {
   text-align: right;
@@ -97,12 +168,29 @@ button {
 }
 
 .opening-gif {
+  animation-duration: 3s;
+  animation-name: shrink;
+
   display: block;
   width: 55%;
   height: 80%;
 }
 
+.ul-container {
+  text-align: center;
+}
+
+.index-item-title {
+  text-align: left;
+}
+.index-item-list {
+  display: inline-block;
+  margin: auto;
+  display: inline-block;
+}
 .title-logo {
+  animation-duration: 5s;
+  animation-name: bounceIn2;
   line-height: 1;
   font-size: 1.5rem;
 }
@@ -119,5 +207,7 @@ button {
 }
 
 .tagline {
+  animation-duration: 5s;
+  animation-name: bounceIn2;
   font-size: 45px;
 }

@@ -8,11 +8,10 @@ class IndexItem extends React.Component {
 
   render() {
     const {title, image_url} = this.props.post;
-    console.log(title);
-    console.log(image_url);
     return (
       <li className="index-item-li-container">
-        <img src={image_url} alt="{image_url}" />
+        <h3 className="index-item-title">{title}</h3>
+        <img className="index-item-image" src={image_url} alt="{image_url}" />
     </li>);
   }
 }

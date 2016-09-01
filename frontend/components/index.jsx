@@ -10,13 +10,17 @@ class Index extends React.Component {
   render() {
     let posts = this.props.posts.posts;
     let keys = Object.keys(posts);
-    let postsArray = keys.map((key) => ({id: key, title: posts[key].title, image_url: posts[key].image_url}));
-    let displayArray = postsArray.map((post) => (<IndexItem key={post.id} post={post} />));
+    let postsArray = keys.map((key) => (
+      {id: key, title: posts[key].title, image_url: posts[key].image_url}));
+    let displayArray = postsArray.map((post) => (
+      <IndexItem key={post.id} post={post} />));
 
     return(
-      <ul>
-        {displayArray}
-      </ul>
+      <div className="ul-container">
+        <ul className="index-item-list">
+          {displayArray}
+        </ul>
+      </div>
     );
   }
 }
