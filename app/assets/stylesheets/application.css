@@ -273,7 +273,44 @@ button:hover, input[type="submit"]:hover {
 .title-logo-navbar {
   width: 13%;
   height: 13%;
-  margin: 2px
-  padding: 2px;
+  /*margin: 2px;*/
+  /*padding: 2px;*/
+
+}
+
+.points-comments {
+  font-size: 12px;
+  display: block;
+  color: darkgrey;
+  text-align: left;
+}
+
+.vote-comment-button-container {
+  align-content: space-around;
+  text-align: left;
+  border-bottom: 1px solid darkgrey;
+}
+
+.upvote-button {
+  background-color:  #ffffcc;;
+  border: 1px solid darkgrey;
+  padding: 5px;
+  padding-bottom: 25px
+  margin: 5px 5px 5px 0px;
+
+}
+
+.downvote-button {
+  background-color:  #ffffcc;;
+  border: 1px solid darkgrey;
+  padding: 6px 14px 7px 14px;
+  margin: 5px;
+
+}
+.comment-button {
+  background-color:  #ffffcc;;
+  border: 1px solid darkgrey;
+  padding: 5px 14px;
+  margin: 5px;
 
 }
