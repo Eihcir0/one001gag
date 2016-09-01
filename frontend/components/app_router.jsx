@@ -35,9 +35,13 @@ class AppRouter extends React.Component{
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
           <IndexRoute component={ indexContainer } onEnter={ this._ensureLoggedIn } />
-          <Route path="/login" component={ homeContainer }
-              onEnter={this._redirectIfLoggedIn}/>
-          </Route>
+        </Route>
+        <Route path="/login" component={ homeContainer }
+            onEnter={this._redirectIfLoggedIn}/>
+
+          <Route path="/posts/:id" component={ homeContainer }
+            onEnter={this._redirectIfLoggedIn}/>
+
       </Router>
     );
   }

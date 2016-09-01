@@ -100,7 +100,11 @@ button {
   padding: 6px;
 }
 
+.login-form {
+  background-color: #ffffcc;
+}
 .home-container {
+  /*background-image: url("https://media.giphy.com/media/A06UFEx8jxEwU/giphy.gif");*/
   display: flex;
   justify-content: space-between;
   margin: 0 50px;
@@ -177,7 +181,9 @@ button {
   width: 55%;
   height: 80%;
 }
-
+.index-item-image {
+  width: 100%;
+}
 .ul-container {
   text-align: center;
 }
@@ -189,7 +195,12 @@ button {
 .index-item-list {
   display: inline-block;
   margin: auto;
-  display: inline-block;
+  display: inline-block
+}
+
+.index-item-li-container {
+  width: 80%;
+  padding-left: 70px;
 }
 .title-logo {
   animation-duration: 3.6s;
@@ -249,6 +260,11 @@ button:hover, input[type="submit"]:hover {
   color: white;
   border-top: none;
   border-bottom: none;
+  border-left: none;
+}
+
+.hot-button:hover {
+  background-color: darkgrey;
 }
 
 .fresh-button {
@@ -261,7 +277,9 @@ button:hover, input[type="submit"]:hover {
   padding-right: 15px;
   color: white;
 }
-
+.fresh-button:hover {
+  background-color: darkgrey;
+}
 .logout-button {
   vertical-align: center;
   background: black;
@@ -271,8 +289,12 @@ button:hover, input[type="submit"]:hover {
   padding-bottom: 12px;
   border-top: none;
   border-bottom: none;
-
 }
+
+.logout-button:hover {
+  background-color: darkgrey;
+}
+
 
 .right-side-container {
   height: 100%;
