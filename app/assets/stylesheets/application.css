@@ -183,6 +183,7 @@ button {
 
 .index-item-title {
   text-align: left;
+  padding-top: 30px;
 }
 .index-item-list {
   display: inline-block;
@@ -237,12 +238,17 @@ button:hover, input[type="submit"]:hover {
 .hot-button {
   vertical-align: center;
   background: black;
+  font-size: 12px;
+
   color: white;
 }
 .logout-button {
   vertical-align: center;
   background: black;
+  font-size: 12px;
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
   height: 100%;
 }
 .right-side-container {
@@ -252,14 +258,16 @@ button:hover, input[type="submit"]:hover {
   display: flex;
 }
 .upload-button {
+  padding-bottom: 10px;
   vertical-align: center;
   height: 100%;
-  background: black;
+  background: blue;
   color: white;
 }
 .fresh-button {
   vertical-align: center;
   background: black;
+  font-size: 12px;
   color: white;
 }
 .title-logo-navbar {
