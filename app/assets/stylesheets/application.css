@@ -234,24 +234,46 @@ button:hover, input[type="submit"]:hover {
   justify-content: space-between;
   background-color: black;
   color: white;
-  opacity: 1.0
+  opacity: 1.0;
+  opacity: 1.0;
+  padding-right: 10px;
+  padding-left: 10px;
 }
+
 .hot-button {
   vertical-align: center;
+  padding-left: 18px;
+  padding-right: 15px;
   background: black;
   font-size: 12px;
+  color: white;
+  border-top: none;
+  border-bottom: none;
+}
 
+.fresh-button {
+  vertical-align: center;
+  border-top: none;
+  border-bottom: none;
+  background: black;
+  font-size: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: white;
 }
+
 .logout-button {
   vertical-align: center;
   background: black;
   font-size: 12px;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: none;
+  border-bottom: none;
+
 }
+
 .right-side-container {
   height: 100%;
 }
@@ -259,18 +281,17 @@ button:hover, input[type="submit"]:hover {
   display: flex;
 }
 .upload-button {
-  padding-bottom: 10px;
+  font-size: 12px;
+  padding: 3;
+  margin-left: 10px;
   vertical-align: center;
   height: 100%;
-  background: blue;
+  background: #3399ff;
   color: white;
+  border: 1px solid darkgrey;
+  border-radius: 7px;
 }
-.fresh-button {
-  vertical-align: center;
-  background: black;
-  font-size: 12px;
-  color: white;
-}
+
 .title-logo-navbar {
   width: 13%;
   height: 13%;
@@ -290,13 +311,13 @@ button:hover, input[type="submit"]:hover {
   align-content: space-around;
   text-align: left;
   border-bottom: 1px solid darkgrey;
+  padding-bottom: 20px;
 }
 
 .upvote-button {
   background-color:  #ffffcc;;
   border: 1px solid darkgrey;
   padding: 5px;
-  padding-bottom: 25px;
   margin: 5px 5px 5px 0px;
 
 }

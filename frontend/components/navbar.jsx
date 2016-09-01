@@ -37,7 +37,7 @@ class Navbar extends React.Component {
             log out
           </button>
           <button className="upload-button" name="upload-button">
-            + Upload
+            + UPLOAD
           </button>
 
         </div>
