@@ -1,3 +1,6 @@
+@import url("normalize.css");
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -23,8 +26,14 @@ body {
   /*width: 900px;*/
   font-family: 'Exo 2', sans-serif;
 }
+
+ol, ul {
+  list-style: none;
+}
+
+
 button {
-  
+
   border: 1px solid grey;
   margin: 10 px;
   color: #fff;
