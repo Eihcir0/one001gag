@@ -1,5 +1,7 @@
 import React from 'react';
 import IndexItem from './index_item.jsx';
+import NavbarContainer from './navbar_container.jsx';
+// <Navbar/>
 
 class Index extends React.Component {
   componentDidMount() {
@@ -16,11 +18,14 @@ class Index extends React.Component {
       <IndexItem key={post.id} post={post} />));
 
     return(
-      <div className="ul-container">
-        <ul className="index-item-list">
-          {displayArray}
-        </ul>
-      </div>
+      <section className="index-page">
+          <NavbarContainer/>
+          <div className="ul-container">
+            <ul className="index-item-list">
+              {displayArray}
+            </ul>
+          </div>
+      </section>
     );
   }
 }

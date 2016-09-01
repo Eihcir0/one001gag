@@ -72,13 +72,14 @@
 * {
   position: relative;
   box-sizing: border-box;
-  background-color: #ffffcc;
 
 }
 
 body {
   /*width: 900px;*/
   font-family: 'Exo 2', sans-serif;
+  /*background-color: inherit;*/
+  background-color: #ffffcc;
 }
 
 .title-logo {
@@ -95,14 +96,14 @@ button {
 
   border: 1px solid grey;
   margin: 10 px;
-  color: #fff;
+  color: #222020;
   padding: 6px;
 }
 
 .home-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 100px;
+  margin: 0 50px;
 }
 
 .login-form-container {
@@ -137,7 +138,7 @@ button {
 }
 
 .guest-in-button {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   display: block;
   margin: 0 auto;
   background-color: #92d892;
@@ -201,7 +202,7 @@ button {
   padding: 0 50px;
 }
 
-.navbar {
+.topbar {
   padding: 10px 45px;
   margin-bottom: 50px;
 }
@@ -210,4 +211,61 @@ button {
   animation-duration: 5s;
   animation-name: bounceIn2;
   font-size: 45px;
+}
+
+button, input[type="submit"] {
+ cursor: pointer;
+ transition: filter .3s, -webkit-filter .3s;
+}
+
+button:hover, input[type="submit"]:hover {
+ filter: brightness(85%);
+ -webkit-filter: brightness(85%);
+}
+
+.whole-bar-container {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  opacity: 1.0
+}
+.hot-button {
+  vertical-align: center;
+  background: black;
+  color: white;
+}
+.logout-button {
+  vertical-align: center;
+  background: black;
+  color: white;
+  height: 100%;
+}
+.right-side-container {
+  height: 100%;
+}
+.left-side-container {
+  display: flex;
+}
+.upload-button {
+  vertical-align: center;
+  height: 100%;
+  background: black;
+  color: white;
+}
+.fresh-button {
+  vertical-align: center;
+  background: black;
+  color: white;
+}
+.title-logo-navbar {
+  width: 13%;
+  height: 13%;
+  margin: 2px
+  padding: 2px;
+
 }

@@ -16,20 +16,3 @@ class IndexItem extends React.Component {
   }
 }
 export default IndexItem;
-
-// <h2 className="index-item-title">"{title}"</h2>
-// <img className="index-item-image" src="`${image_url}`" alt="`${title}`" />
-//
-// render() {
-//   const { title, image_url } = this.props.post
-//   let detail;
-//
-//   return (
-//     <li className="index-item">
-//       <div className="index-item-header">
-//       </div>
-//       { detail }
-//     </li>
-//   );
-// }
-// };
