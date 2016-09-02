@@ -349,12 +349,21 @@ button:hover, input[type="submit"]:hover {
   border: 1px solid darkgrey;
   padding: 6px 14px 7px 14px;
   margin: 5px;
-
 }
+
 .comment-button {
   background-color:  #ffffcc;;
   border: 1px solid darkgrey;
   padding: 5px 14px;
   margin: 5px;
+}
 
+.index-detail-page {
+
+}
+.index-detail-container {
+  padding-top: 0;
+}
+.index-item-li-container {
+  list-style: none;
 }
