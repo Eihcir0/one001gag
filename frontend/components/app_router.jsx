@@ -5,6 +5,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import {App} from './app';
 import homeContainer from './home_container';
 import indexContainer from './index_container.jsx';
+import indexDetailContainer from './index_detail_container.jsx';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -33,19 +34,21 @@ class AppRouter extends React.Component{
   render(){
     return(
       <Router history={ hashHistory }>
-        <Route path="/" component={ App }>
-          <IndexRoute component={ indexContainer } onEnter={ this._ensureLoggedIn } />
-        </Route>
-        <Route path="/login" component={ homeContainer }
-            onEnter={this._redirectIfLoggedIn}/>
+       <Route path="/" component={ App }>
+         <IndexRoute component={ indexContainer } onEnter={ this._ensureLoggedIn } />
 
-          <Route path="/posts/:id" component={ homeContainer }
-            onEnter={this._redirectIfLoggedIn}/>
+         <Route path="login" component={ homeContainer }
+           onEnter={this._redirectIfLoggedIn}/>
 
-      </Router>
+         <Route path="posts/:id" component={ indexDetailContainer } />
+
+       </Route>
+
+     </Router>
     );
   }
 }
+
 
 AppRouter.contextTypes = {
   store: React.PropTypes.object.isRequired

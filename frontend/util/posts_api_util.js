@@ -5,3 +5,11 @@ export const requestPosts = (success) => {
     success
   });
 };
+
+export const requestPost = (postId, success) => {
+  $.ajax({
+    type: "GET",
+    url: `api/posts/${postId}`,
+    success
+  });
+};

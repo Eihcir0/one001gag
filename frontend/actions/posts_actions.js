@@ -5,3 +5,11 @@ export const receivePosts = (data) => ({
   type: "RECEIVE_POSTS",
   posts: data
 });
+export const requestPost = (postId) => ({
+  type: "REQUEST_POST",
+  postId
+});
+export const receivePost = (data) => ({
+  type: "RECEIVE_POST",
+  post: data
+});

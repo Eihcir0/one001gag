@@ -3,7 +3,6 @@ import IndexInfoItemContainer from './index_info_item_container';
 class IndexItem extends React.Component {
   constructor(props){
     super(props);
-
   }
 
   render() {
