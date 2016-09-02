@@ -6,6 +6,8 @@ class IndexItem extends React.Component {
   }
 
   render() {
+    if (this.props.post === undefined) {return <div>loading...</div>;}
+    if (this.props.post) {
     const {title, image_url} = this.props.post;
     return (
       <li className="index-item-li-container">
@@ -13,6 +15,7 @@ class IndexItem extends React.Component {
         <img className="index-item-image" src={image_url} alt="{image_url}" />
         <IndexInfoItemContainer />
     </li>);
+    }
   }
 }
 export default IndexItem;

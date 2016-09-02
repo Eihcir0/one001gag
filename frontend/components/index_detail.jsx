@@ -7,21 +7,22 @@ class IndexDetail extends React.Component {
   constructor(props){
     super(props);
     this.postId = this.props.params.id;
-    this.post = this.props.posts[this.props.params.id];
-    debugger;
+    // debugger;
   }
 
   componentDidMount() {
+    // debugger;
     this.props.requestPost(this.postId);
   }
 
 
   render() {
-    debugger;
+    // debugger;
+    let post = this.props.posts.posts[this.postId];
     return (
       <section className="index-detail-page">
         <NavbarContainer/>
-        <IndexItem key={this.postId} post={this.post} />
+        <IndexItem key={this.postId} post={post} />
       </section>
     );
   }
