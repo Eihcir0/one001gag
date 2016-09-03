@@ -21,10 +21,9 @@ What is one001gag?
 - [ ] New account creation, login, and guest/demo login
 - [ ] Feed displays posts, comment count, vote count
 - [ ] Post detail displays
-  - [ ] nested comments
+  - [ ] comments
   - [ ] new comment form
-  - [ ] reply to comments
-- [ ] UpVotes/DownVotes on comments and posts
+- [ ] UpVotes/DownVotes on posts
 - [ ] Production README [sample](docs/production_readme.md)
 
 ## Design Docs

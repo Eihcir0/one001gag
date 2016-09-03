@@ -82,11 +82,7 @@ body {
   background-color: #ffffcc;
 }
 
-.title-logo {
 
-  width: 15%;
-  height: 15%;
-}
 ol, ul {
   list-style: none;
 }
@@ -194,7 +190,6 @@ button {
 }
 .index-item-list {
   display: inline-block;
-  margin: auto;
   display: inline-block
 }
 
@@ -238,6 +233,7 @@ button:hover, input[type="submit"]:hover {
 
 .whole-bar-container {
   width: 100%;
+  top: 0;
   z-index: 1;
   position: fixed;
   display: flex;
@@ -248,7 +244,10 @@ button:hover, input[type="submit"]:hover {
   opacity: 1.0;
   opacity: 1.0;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 0px;
+  paddiong-top: 0px;
+  margin-top: 0px;
+  border: none;
 }
 
 .hot-button {
@@ -314,7 +313,7 @@ button:hover, input[type="submit"]:hover {
   border-radius: 7px;
 }
 
-.title-logo-navbar {
+.title-logo-home {
   width: 13%;
   height: 13%;
   /*margin: 2px;*/
@@ -362,8 +361,44 @@ button:hover, input[type="submit"]:hover {
 
 }
 .index-detail-container {
-  padding-top: 0;
+  margin-top: 50px;
 }
 .index-item-li-container {
   list-style: none;
+}
+
+
+
+.comment-body {
+  padding-top: 30px;
+  padding-left: 68px;
+}
+
+.comments-items {
+  padding-left: 68px;
+}
+
+.new-comment-form {
+  display: block;
+}
+
+.post-comment-button {
+  height: 40px;
+  width: 80px;
+  margin-left: 530px;
+  border-radius: 8px;
+  background-color: #3399ff;
+  color: white;
+}
+
+.header-link {
+
+  padding: 0px;
+  margin: 0px;
+  width: 60px;
+}
+
+.title-logo-navbar {
+  width: 100%;
+  height: 100%;
 }

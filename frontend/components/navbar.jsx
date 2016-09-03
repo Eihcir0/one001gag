@@ -26,7 +26,9 @@ class Navbar extends React.Component {
     return (
       <div className="whole-bar-container">
         <div className="left-side-container">
-          <img className="title-logo-navbar" src="http://res.cloudinary.com/one001gag/image/upload/v1472693768/0ne001gaglogo_ezwrht.png" />
+          <a className="header-link" href="#/">
+            <img className="title-logo-navbar" src="http://res.cloudinary.com/one001gag/image/upload/v1472693768/0ne001gaglogo_ezwrht.png"/>
+          </a>
           <button className="hot-button" name="hot button">Hot
           </button>
           <button className="fresh-button" name="fresh button">Fresh
