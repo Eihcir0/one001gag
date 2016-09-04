@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import {logOut} from './../actions/session_actions.js';
 import Navbar from './navbar.jsx';
 
+// const mapStateToProps = () => ({
+// });
 
 const mapDispatchToProps = dispatch => ({
   logOut: () => dispatch(logOut())

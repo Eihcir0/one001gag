@@ -23,6 +23,6 @@ export const logOut = (success, error) => {
     type: "DELETE",
     url: "api/session",
     success,
-    error,
+    error
   });
 };

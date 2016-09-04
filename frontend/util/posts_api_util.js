@@ -13,3 +13,11 @@ export const requestPost = (postId, success) => {
     success
   });
 };
+
+export const createPost = (post, success) => {
+  $.ajax({
+    type: "POST",
+    url: `api/posts`,
+    success
+  });
+};

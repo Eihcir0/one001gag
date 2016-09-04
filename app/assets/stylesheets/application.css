@@ -95,6 +95,42 @@ button {
   color: #222020;
   padding: 6px;
 }
+.parent-info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cool-button {
+  display: flex;
+  border: none
+}
+
+.next-button {
+  height: 40px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding-left: 10px;
+  margin: 0;
+
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 2px;
+  top: -3px;
+  background-color: transparent;
+  border: none;
+  font-size: 29px;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid red;
+}
 
 .login-form {
   background-color: #ffffcc;
@@ -229,6 +265,14 @@ button, input[type="submit"] {
 button:hover, input[type="submit"]:hover {
  filter: brightness(85%);
  -webkit-filter: brightness(85%);
+ -webkit-appearance: none;
+}
+
+.next-button, .arrow-right, .cool-button:hover, input[type="submit"]:hover {
+ cursor: pointer;
+ filter: none;
+ transition: none;
+ -webkit-filter: none;
 }
 
 .whole-bar-container {
@@ -331,7 +375,6 @@ button:hover, input[type="submit"]:hover {
 .vote-comment-button-container {
   align-content: space-around;
   text-align: left;
-  border-bottom: 1px solid darkgrey;
   padding-bottom: 20px;
 }
 
@@ -365,6 +408,8 @@ button:hover, input[type="submit"]:hover {
 }
 .index-item-li-container {
   list-style: none;
+  /*border-bottom: 1px solid darkgrey;*/
+
 }
 
 

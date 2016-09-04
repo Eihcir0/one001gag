@@ -15,6 +15,11 @@ export const PostsMiddleware = ({getState, dispatch}) => next => action => {
       API.requestPost(action.postId, successCallback);
       return next(action);
 
+    case "CREATE_POST":
+      successCallback = data => dispatch(Actions.receivePost(data));
+      API.createPost(action.post, successCallback);
+      return next(action);
+
     default:
       return next(action);
     }

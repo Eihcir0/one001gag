@@ -1,5 +1,3 @@
-///coppied from benchbnb
-
 import { connect } from 'react-redux';
 import {logIn} from './../actions/session_actions.js';
 import {signUp} from './../actions/session_actions.js';

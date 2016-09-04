@@ -13,3 +13,8 @@ export const receivePost = (data) => ({
   type: "RECEIVE_POST",
   post: data
 });
+
+export const createPost = (data) => ({
+  type: "CREATE_POST",
+  post: data
+});

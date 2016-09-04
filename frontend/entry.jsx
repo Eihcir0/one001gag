@@ -7,6 +7,7 @@ import * as API from './util/session_api_util';
 import {Root} from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
+  
   window.signUp = Actions.signUp;
   window.logIn = Actions.logIn;
   window.logOut = Actions.logOut;
