@@ -1,4 +1,6 @@
 import React from 'react';
+import {hashHistory } from 'react-router';
+
 
 class IndexInfoItem extends React.Component {
   constructor(props){
@@ -6,10 +8,16 @@ class IndexInfoItem extends React.Component {
 
   }
 
+  handleCommentButtonClick() {
+      hashHistory.push(
+        `/posts/${(parseInt(this.props.post.id))}`);
+  }
+
   render() {
     let points = Math.floor(Math.random()*1000);
     let numComments =
     (this.props.post.num_comments===null ? 0 : this.props.post.num_comments);
+    this.handleCommentButtonClick = this.handleCommentButtonClick.bind(this);
 
     // ·
 
@@ -22,7 +30,7 @@ class IndexInfoItem extends React.Component {
           </button>
           <button className="downvote-button" name="downvote-button">▼
           </button>
-          <button className="comment-button" name="comment-button">💬
+          <button onClick={this.handleCommentButtonClick} className="comment-button" name="comment-button">💬
           </button>
         </div>
       </div>

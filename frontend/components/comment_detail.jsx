@@ -10,7 +10,7 @@ class CommentDetail extends React.Component {
     return (
       <div className="commentDetailItem">
         <span className="commentorName">
-          {this.props.comment.user_id} wrote: </span>
+          {this.props.comment.username}: </span>
         <br/>
 
         <span className="commentBody">

@@ -2,7 +2,6 @@ import React from 'react';
 import NavbarContainer from './navbar_container.jsx';
 import IndexItemShow from './index_item_show';
 import { withRouter } from 'react-router';
-import { Link, hashHistory } from 'react-router';
 import CommentDetail from './comment_detail';
 
 class IndexDetail extends React.Component {
@@ -33,7 +32,7 @@ class IndexDetail extends React.Component {
 
     if (post===undefined) {return <div>Loading...</div>;}
     else {
-    let comments = post.comments.map((comment) => (
+    let comments = post.all_comments.map((comment) => (
       <CommentDetail key={comment.id} comment={comment}/>
     ));
     return (
@@ -42,7 +41,7 @@ class IndexDetail extends React.Component {
           <section className="index-detail-container">
             <IndexItemShow key={post.id} post={post} />
             <div className="create-post-form">
-                <form className="new-comment-form" onSubmit={this.handleCommentSubmit}>
+                <form className="new-comment-form" >
                   <div className="comment-body">
                     <input type="text"
                       className="comment-text-input"
@@ -53,9 +52,13 @@ class IndexDetail extends React.Component {
                       rows='5'
                       onChange={this.update('commentBody')}></input>
                   </div>
-                  <button className="post-comment-button">Post</button>
+                  <button onClick={this.handleCommentSubmit} className="post-comment-button" name="post-comment-button">
+                    Post
+                  </button>
+
                 </form>
             </div>
+            <br/>
             {comments}
       </section>
     </div>
