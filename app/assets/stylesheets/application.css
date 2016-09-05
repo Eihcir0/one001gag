@@ -430,7 +430,8 @@ button:hover, input[type="submit"]:hover {
 .post-comment-button {
   height: 40px;
   width: 80px;
-  margin-left: 530px;
+  margin-top: 15px;
+  margin-left: 750px;
   border-radius: 8px;
   background-color: #3399ff;
   color: white;
@@ -451,6 +452,7 @@ button:hover, input[type="submit"]:hover {
 .form-input-label {
   font-size: 24px;
   display: block;
+  margin-top: 35px;
 }
 
 .create-post-input {
@@ -461,6 +463,34 @@ button:hover, input[type="submit"]:hover {
 }
 
 
+.submit-post-button {
+margin: 0 10px 0 0;
+vertical-align: middle;
+padding: 0.8rem 1.4rem;
+color: #fff;
+border: 0;
+background-color: #3399ff;
+border-radius: 3px;
+}
+
 .upload-image-button {
   align-content: center;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3399ff;
+  border-radius: 3px;
+}
+.upload-image {
+  border: 1px solid grey;
+  vertical-align: middle;
+  width: 50%;
+
+}
+
+.comment-text-input {
+  top: 0;
+  vertical-align: top;
+  padding: 20px;
+  width: 79%;
+  height: 60px;
 }

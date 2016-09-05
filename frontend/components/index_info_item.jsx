@@ -8,13 +8,15 @@ class IndexInfoItem extends React.Component {
 
   render() {
     let points = Math.floor(Math.random()*1000);
-    let comments = Math.floor(Math.random()*100);
+    let numComments =
+    (this.props.post.num_comments===null ? 0 : this.props.post.num_comments);
 
     // ·
 
     return (
       <div>
-        <span className="points-comments">{points} points · {comments} comments</span>
+        <span className="points-comments">
+          {points} points · {numComments} comments</span>
         <div className="vote-comment-button-container">
           <button className="upvote-button" name="upvote-button">▲ UP
           </button>

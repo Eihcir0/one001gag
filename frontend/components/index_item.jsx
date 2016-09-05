@@ -10,7 +10,6 @@ class IndexItem extends React.Component {
   }
 
   handleClick (postId) {
-    // debugger;
     hashHistory.push(`/posts/${this.props.post.id}`);
   }
 
@@ -22,7 +21,7 @@ class IndexItem extends React.Component {
       <li className="index-item-li-container" onClick={this.handleClick}>
         <h3 className="index-item-title">{title}</h3>
         <img className="index-item-image" src={image_url} alt="{image_url}" />
-        <IndexInfoItemContainer />
+        <IndexInfoItemContainer post={this.props.post} />
     </li>);
     }
   }

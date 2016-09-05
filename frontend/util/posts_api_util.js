@@ -25,3 +25,12 @@ export const createPost = (post, success) => {
     success
   });
 };
+
+export const createComment = (comment, success) => {
+  $.ajax({
+    type: "POST",
+    url: `api/comments`,
+    data: {comment: comment},
+    success
+  });
+};

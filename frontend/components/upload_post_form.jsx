@@ -15,10 +15,11 @@ class uploadPostForm extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-			let post = {title: this.state.title, image_url: this.state.image_url};
+			let post = this.state;
 			if (this.state.image_url === "" || this.state.title === "") {
 				this.setState({errors: true});
 			} else {
+			console.log(post);
 			this.props.closeModal();
 			this.props.createPost(post);
 		}}
@@ -29,8 +30,8 @@ class uploadPostForm extends React.Component {
 	       window.cloudinary_options,
 	       (error, results) => {
 	         if (!error) {
-						 this.setState({thumbnail_url: results[0].thumbnail_url });
 						 this.setState({image_url: results[0].url});
+						 this.setState({thumbnail_url: results[0].thumbnail_url });
 
 	         }
 	       }
@@ -43,6 +44,7 @@ class uploadPostForm extends React.Component {
 		    <section className="upload-form-container">
 		      <form onSubmit={this.handleSubmit} className="form">
 		        <h1 className="form-h1">Upload a Post</h1>
+						<img className="upload-image" src={this.state.thumbnail_url} />
 
 		        <label className="form-input-label">Title
 							<input type="text"
@@ -50,7 +52,6 @@ class uploadPostForm extends React.Component {
 								onChange={this.update("title")}
 								className="create-post-input" />
 		        </label>
-						<img className="upload-image" src={this.state.thumbnail_url} />
 						<button onClick={this.handleSubmit} className="submit-post-button" name="submit_post_button">Submit
 						</button>
 

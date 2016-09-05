@@ -2,57 +2,64 @@ import React from 'react';
 import NavbarContainer from './navbar_container.jsx';
 import IndexItemShow from './index_item_show';
 import { withRouter } from 'react-router';
+import { Link, hashHistory } from 'react-router';
+import CommentDetail from './comment_detail';
 
 class IndexDetail extends React.Component {
   constructor(props){
     super(props);
-    this.postId = this.props.params.id;
-    this.commentBody = "";
+    // this.postId = this.props.params.id;
+    this.state = {commentBody: ""};
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.requestPost(this.postId);
+    this.props.requestPost(this.props.params.id);
   }
 
   update(property) {
     return e => this.setState({[property]: e.target.value});
   }
+
   handleCommentSubmit () {
-    return ()=>true;
+    let comment = {body: this.state.commentBody,
+      post_id: this.props.params.id};
+      this.props.createComment(comment);
+
   }
 
   render() {
-    let post = this.props.posts.posts[this.postId];
+    let post = this.props.posts.posts[this.props.params.id];
+
+    if (post===undefined) {return <div>Loading...</div>;}
+    else {
+    let comments = post.comments.map((comment) => (
+      <CommentDetail key={comment.id} comment={comment}/>
+    ));
     return (
         <div className="index-detail-page">
           <NavbarContainer/>
           <section className="index-detail-container">
-            <IndexItemShow key={this.postId} post={post} />
+            <IndexItemShow key={post.id} post={post} />
             <div className="create-post-form">
-                <form className="new-comment-form" onSubmit={this.handleCommentSubmit()}>
+                <form className="new-comment-form" onSubmit={this.handleCommentSubmit}>
                   <div className="comment-body">
-                    <textarea
+                    <input type="text"
                       className="comment-text-input"
                       ref="body"
                       cols='60'
-                      value={this.commentBody ? this.commentBody : "Write comment..."}
+                      placeholder = "Write comment..."
+                      value={this.state.commentBody}
                       rows='5'
-                      onChange={this.update('commentBody')}></textarea>
+                      onChange={this.update('commentBody')}></input>
                   </div>
                   <button className="post-comment-button">Post</button>
                 </form>
             </div>
-            <br/>
-            <div className="comments-items">
-            <p>Jose: 1st comment!!!</p>
-            <br/>
-            <p>John B: This post sucks!</p>
-            <br/>
-            <p>Joe B: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+            {comments}
       </section>
     </div>
     );
-  }
+  }}
 }
 export default withRouter (IndexDetail);

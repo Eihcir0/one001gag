@@ -14,7 +14,7 @@ class IndexItemShow extends React.Component {
       <li className="index-item-li-container">
         <h2 className="index-item-title-show">{title}</h2>
         <div className="parent-info-item">
-          <IndexInfoItemContainer />
+          <IndexInfoItemContainer post={this.props.post}/>
             <div className="cool-button">
               <button className="next-button" name="next-button">
                 NEXT POST

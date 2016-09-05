@@ -103,3 +103,6 @@ Post.create(user_id: 33, image_url: "http://media02.hongkiat.com/programming-jok
 Post.create(user_id: 55, image_url: "http://devhumor.com/content/uploads//images/August2016/about-stdout.jpg", title: "dictionary injection")
 Post.create(user_id: 56, image_url: "http://devhumor.com/content/uploads//images/August2016/Programmers.png", title: "truth")
 Post.create(user_id: 54, image_url: "http://devhumor.com/content/uploads//images/August2016/null.jpg", title: "dufuq??!?")
+Comment.create(user_id: 33, post_id: 1, body: "This is dumb")
+Comment.create(user_id: 27, post_id: 1, body: "LIKE!")
+Comment.create(user_id: 11, post_id: 1, body: "I don't understand")

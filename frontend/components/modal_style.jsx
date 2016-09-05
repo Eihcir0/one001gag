@@ -10,13 +10,13 @@ export const ModalStyle = {
     backgroundColor : 'rgba(100, 100, 100, 0.75)'
   },
   content : {
+    textAlign       : 'center',
     position        : 'fixed',
-    top             : '200px',
-    left            : '300px',
-    right           : '300px',
-    bottom          : '200px',
+    top             : '50%',
+    left            : '50%',
+    transform       : 'translate3d(-50%, -50%, 0)',
     border          : '1px solid #ccc',
-    padding         : '20px',
+    padding         : '40px',
     backgroundColor : 'white',
     opacity         : '1'
   }

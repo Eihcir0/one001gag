@@ -3,6 +3,11 @@ export const createPost = (data) => ({
   post: data
 });
 
+export const createComment = (data) => ({
+  type: "CREATE_COMMENT",
+  comment: data
+});
+
 export const requestPosts = () => ({
   type: "REQUEST_POSTS",
 });
