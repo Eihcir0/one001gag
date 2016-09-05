@@ -69,7 +69,7 @@ class Navbar extends React.Component {
             onClick={()=>(this.setState({modalOpen: false}))}>
             ✖
           </button>
-          <UploadPostFormContainer/>
+          <UploadPostFormContainer closeModal={this.setState.bind(this,{modalOpen: false})}/>
         </Modal>
       </div>
     );

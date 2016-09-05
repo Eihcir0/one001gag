@@ -1,5 +1,7 @@
 import * as Actions from '../actions/posts_actions';
 import * as API from './../util/posts_api_util';
+import {hashHistory } from 'react-router';
+
 
 export const PostsMiddleware = ({getState, dispatch}) => next => action => {
   let successCallback;
@@ -16,11 +18,14 @@ export const PostsMiddleware = ({getState, dispatch}) => next => action => {
       return next(action);
 
     case "CREATE_POST":
-      successCallback = data => dispatch(Actions.receivePost(data));
+
+      successCallback = data => hashHistory.push(`/posts/${(Object.keys(data)[0])}`);
       API.createPost(action.post, successCallback);
       return next(action);
-
     default:
       return next(action);
     }
 };
+
+
+//

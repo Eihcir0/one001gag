@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import uploadPostForm from './upload_post_form';
-import {createPost} from './../util/posts_api_util';
+import {createPost} from './../actions/posts_actions';
 
 
 const mapDispatchToProps = dispatch => ({
