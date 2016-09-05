@@ -454,7 +454,8 @@ button:hover, input[type="submit"]:hover {
 }
 
 .create-post-input {
-  width: 520px;
+  width: 80%;
+  font-size: 18px;
   padding: 10px;
   margin: 10px;
 }
