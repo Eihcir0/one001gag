@@ -18,23 +18,26 @@ export const PostsMiddleware = ({getState, dispatch}) => next => action => {
       return next(action);
 
     case "CREATE_POST":
-
       successCallback = data => hashHistory.push(`/posts/${Object.keys(data)[0]}`);
-
       API.createPost(action.post, successCallback);
       return next(action);
 
     case "CREATE_COMMENT":
-
       successCallback = data => window.scrollTo(0,document.body.scrollHeight);
-
       API.createComment(action.comment, successCallback);
+      return next(action);
+
+    case "DESTROY_VOTE":
+    successCallback = data => dispatch(Actions.receivePost(data));
+    API.destroyVote(action.vote, successCallback);
+    return next(action);
+
+    case "CREATE_VOTE":
+      successCallback = data => dispatch(Actions.receivePost(data));
+      API.createVote(action.vote, successCallback);
       return next(action);
 
     default:
       return next(action);
     }
 };
-
-
-//

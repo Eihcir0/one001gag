@@ -8,6 +8,16 @@ export const createComment = (data) => ({
   comment: data
 });
 
+export const createVote = (data) => ({
+  type: "CREATE_VOTE",
+  vote: data
+});
+
+export const destroyVote = (data) => ({
+  type: "DESTROY_VOTE",
+  vote: data
+});
+
 export const requestPosts = () => ({
   type: "REQUEST_POSTS",
 });

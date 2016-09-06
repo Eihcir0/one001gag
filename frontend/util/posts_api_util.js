@@ -1,5 +1,3 @@
-// import {hashHistory } from 'react-router';
-
 
 export const requestPosts = (success) => {
   $.ajax({
@@ -31,6 +29,24 @@ export const createComment = (comment, success) => {
     type: "POST",
     url: `api/comments`,
     data: {comment: comment},
+    success
+  });
+};
+
+export const createVote = (vote, success) => {
+  $.ajax({
+    type: "POST",
+    url: `api/votes`,
+    data: {vote: vote},
+    success
+  });
+};
+
+export const destroyVote = (vote, success) => {
+  $.ajax({
+    type: "DELETE",
+    url: `api/votes/${vote.id}`,
+    data: {vote: vote},
     success
   });
 };

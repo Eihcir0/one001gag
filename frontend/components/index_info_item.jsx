@@ -7,7 +7,7 @@ class IndexInfoItem extends React.Component {
     super(props);
     this.handleCommentButtonClick = this.handleCommentButtonClick.bind(this);
     this.currentUserId = this.props.session.currentUser.id;
-    this.currentUserVote = this.currentUserVote.bind(this);
+    this.currentUserVoteValue = this.currentUserVoteValue.bind(this);
     this.currentUserUpvote = this.currentUserUpvote.bind(this);
     this.currentUserDownvote = this.currentUserDownvote.bind(this);
     this.commentButton = this.commentButton.bind(this);
@@ -23,32 +23,57 @@ class IndexInfoItem extends React.Component {
   }
 
   handleUpVoteButton () {
-    if (this.currentUserDownvote()) {console.log("destroy vote");}
-    else if (!this.currentUserUpvote()) {console.log("createUpVote");}
+    let vote;
+    if (this.currentUserDownvote()) {
+      vote = {id: this.currentUserVote().id};
+      this.props.destroyVote(vote);
+    }
+    else if (!this.currentUserUpvote()) {
+      vote = {post_id: this.props.post.id, vote_value: 1};
+      this.props.createVote(vote);
+    }
 
   }
 
   handleDownVoteButton () {
-    if (this.currentUserUpvote()) {console.log("destroy vote");}
-    else if (!this.currentUserDownvote()) {console.log("createDownVote");}
-
+    let vote;
+    if (this.currentUserUpvote()) {
+      vote = {id: this.currentUserVote().id};
+      this.props.destroyVote(vote);
+    } else if (!this.currentUserDownvote())   {
+      vote = {post_id: this.props.post.id, vote_value: -1};
+      console.log("createUpVote");
+      this.props.createVote(vote);
+    }
   }
 
-  currentUserVote() {
+  currentUserVoteValue() {
 
-    let tester = this.props.post.votes[this.props.post.votes.map(vote => vote.user_id).indexOf(this.currentUserId)];
-
+    let tester;
+    if(this.props.post.votes) {
+    tester = this.props.post.votes[this.props.post.votes.map(vote => vote.user_id).indexOf(this.currentUserId)];
+    }
 
     if (tester) {return tester.vote_value;}
    else {return null;}
   }
+  currentUserVote() {
+
+    let tester;
+    if(this.props.post.votes) {
+    tester = this.props.post.votes[this.props.post.votes.map(vote => vote.user_id).indexOf(this.currentUserId)];
+    }
+
+    if (tester) {return tester;}
+   else {return null;}
+  }
 
   currentUserUpvote() {
-    return (this.currentUserVote()===1);
+    return (this.currentUserVoteValue()===1);
   }
 
   currentUserDownvote() {
-    return (this.currentUserVote()===-1);
+    return (this.currentUserVoteValue()===-1);
   }
 
   commentButton() {
@@ -59,7 +84,6 @@ class IndexInfoItem extends React.Component {
   );} else {return (<span/>);}
   }
   render() {
-
     let points =
     (this.props.post.total_points===null ? 0 : this.props.post.total_points);
     let numComments =
