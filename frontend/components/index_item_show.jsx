@@ -10,13 +10,16 @@ class IndexItemShow extends React.Component {
 
   }
 
-  handleClick() {
-    debugger;
+  handleClick(e) {
+    e.preventDefault();
     hashHistory.push(`/posts/${this.props.post.id + 1}`);
+
   }
 
   nextButton() {
 
+    if (this.props.lastPost) {console.log("last one!");}
+    else {
         return (
           <div className="cool-button" onClick={this.handleClick}>
             <button className="next-button" name="next-button">
@@ -24,7 +27,7 @@ class IndexItemShow extends React.Component {
             </button>
             <div className="arrow-right" />
           </div>
-        );
+        );}
       }
 
 
@@ -38,7 +41,7 @@ class IndexItemShow extends React.Component {
       <li className="index-item-li-container">
         <h2 className="index-item-title-show">{title}</h2>
         <div className="parent-info-item">
-          <IndexInfoItemContainer post={this.props.post}/>
+          <IndexInfoItemContainer show={true} post={this.props.post}/>
           {this.nextButton()}
 
         </div>

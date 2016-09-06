@@ -15,14 +15,18 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments
+  has_many :votes
+
+  
 
   def all_comments
     results = [] + self.comments
     results.map{|comment| ({id: comment.id, post_id: comment.post_id, user_id: comment.user_id, body: comment.body, username: comment.user.username}) }
+  end
 
-    end
-
-
+  def total_points
+    self.votes.map{|vote| vote.vote_value}.inject(&:+)
+  end
 
   def num_comments
     self.comments.count

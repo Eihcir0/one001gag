@@ -19,12 +19,15 @@ export const PostsMiddleware = ({getState, dispatch}) => next => action => {
 
     case "CREATE_POST":
 
-      successCallback = data => hashHistory.push(`/posts/${(Object.keys(data)[0])}`);
+      successCallback = data => hashHistory.push(`/posts/${Object.keys(data)[0]}`);
+
       API.createPost(action.post, successCallback);
       return next(action);
 
     case "CREATE_COMMENT":
-      successCallback = data => hashHistory.push(`/posts/${data.post.post_id}`);
+
+      successCallback = data => window.scrollTo(0,document.body.scrollHeight);
+
       API.createComment(action.comment, successCallback);
       return next(action);
 

@@ -13,7 +13,7 @@ class Index extends React.Component {
     let posts = this.props.posts.posts;
     let keys = Object.keys(posts);
     let postsArray = keys.map((key) => (
-      {id: key, comments: posts[key].comments, num_comments: (posts[key].num_comments===null ? 0 : posts[key].num_comments), title: posts[key].title, image_url: posts[key].image_url}));
+      {id: key, votes: posts[key].votes, comments: posts[key].comments, num_comments: (posts[key].num_comments===null ? 0 : posts[key].num_comments), total_points: (posts[key].total_points===null ? 0 : posts[key].total_points), title: posts[key].title, image_url: posts[key].image_url}));
     let displayArray = postsArray.map((post) => (
       <IndexItem key={post.id} post={post} />));
 

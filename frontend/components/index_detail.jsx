@@ -9,21 +9,28 @@ class IndexDetail extends React.Component {
     super(props);
     // this.postId = this.props.params.id;
     this.state = {commentBody: ""};
+    this.state.postId = this.props.params.id;
     this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.requestPost(this.props.params.id);
+    this.props.requestPosts();
   }
+
 
   update(property) {
     return e => this.setState({[property]: e.target.value});
   }
 
-  handleCommentSubmit () {
+  handleCommentSubmit (e) {
+    e.preventDefault();
     let comment = {body: this.state.commentBody,
-      post_id: this.props.params.id};
-      this.props.createComment(comment);
+      post_id: this.state.postId};
+
+    this.props.createComment(comment);
+    this.setState({commentBody: ""});
+    this.props.requestPosts();
+
 
   }
 
@@ -35,15 +42,18 @@ class IndexDetail extends React.Component {
     let comments = post.all_comments.map((comment) => (
       <CommentDetail key={comment.id} comment={comment}/>
     ));
+    let postKeys = Object.keys(this.props.posts.posts);
+    let lastOne = postKeys[postKeys.length - 1] == post.id;
     return (
         <div className="index-detail-page">
           <NavbarContainer/>
           <section className="index-detail-container">
-            <IndexItemShow key={post.id} post={post} />
+            <IndexItemShow lastPost={lastOne} key={post.id} post={post} />
             <div className="create-post-form">
-                <form className="new-comment-form" >
+                <form onSubmit={this.handleCommentSubmit} className="new-comment-form" >
                   <div className="comment-body">
                     <input type="text"
+
                       className="comment-text-input"
                       ref="body"
                       cols='60'
@@ -52,14 +62,16 @@ class IndexDetail extends React.Component {
                       rows='5'
                       onChange={this.update('commentBody')}></input>
                   </div>
-                  <button onClick={this.handleCommentSubmit} className="post-comment-button" name="post-comment-button">
+                  <button type="submit" className="post-comment-button" >
                     Post
                   </button>
 
                 </form>
             </div>
             <br/>
-            {comments}
+            <ul className="comments-list">
+              {comments}
+            </ul>
       </section>
     </div>
     );

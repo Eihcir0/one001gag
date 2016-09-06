@@ -21,7 +21,7 @@ class IndexItem extends React.Component {
       <li className="index-item-li-container">
         <h3 className="index-item-title" onClick={this.handleClick}>{title}</h3>
         <img className="index-item-image" src={image_url} alt="{image_url}" onClick={this.handleClick} />
-        <IndexInfoItemContainer post={this.props.post} />
+        <IndexInfoItemContainer show={false} post={this.props.post} />
     </li>);
     }
   }

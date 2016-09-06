@@ -8,7 +8,7 @@ class CommentDetail extends React.Component {
 
   render() {
     return (
-      <div className="commentDetailItem">
+      <li className="commentDetailItem">
         <span className="commentorName">
           {this.props.comment.username}: </span>
         <br/>
@@ -16,7 +16,7 @@ class CommentDetail extends React.Component {
         <span className="commentBody">
           {this.props.comment.body} </span>
 
-      </div>
+      </li>
   );}
 }
 export default CommentDetail;

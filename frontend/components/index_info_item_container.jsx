@@ -8,7 +8,8 @@ import IndexInfoItem from './index_info_item.jsx';
 // });
 
 const mapStateToProps = state => ({
-  posts: state.posts
+  posts: state.posts,
+  session: state.session
 });
 
 export default connect(

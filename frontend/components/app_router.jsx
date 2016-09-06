@@ -33,7 +33,7 @@ class AppRouter extends React.Component{
 
   render(){
     return(
-      <Router history={ hashHistory }>
+      <Router  history={ hashHistory }>
        <Route path="/" component={ App }>
          <IndexRoute component={ indexContainer } onEnter={ this._ensureLoggedIn } />
 
