@@ -46,7 +46,6 @@ class IndexInfoItem extends React.Component {
 
     } else if (!this.currentUserDownvote())   {
       vote = {post_id: this.props.post.id, vote_value: -1};
-      console.log("createUpVote");
       this.props.createVote(vote);
     }
     else if (this.currentUserDownvote()) {

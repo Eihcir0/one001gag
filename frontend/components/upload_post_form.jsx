@@ -19,7 +19,6 @@ class uploadPostForm extends React.Component {
 			if (this.state.image_url === "" || this.state.title === "") {
 				this.setState({errors: true});
 			} else {
-			console.log(post);
 			this.props.closeModal();
 			this.props.createPost(post);
 		}}

@@ -18,7 +18,7 @@ class IndexItemShow extends React.Component {
 
   nextButton() {
 
-    if (this.props.lastPost) {console.log("last one!");}
+    if (this.props.lastPost) {let RichieIsCool = true;}
     else {
         return (
           <div className="cool-button" onClick={this.handleClick}>
