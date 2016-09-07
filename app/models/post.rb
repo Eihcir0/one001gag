@@ -17,11 +17,11 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :votes
 
-  
+
 
   def all_comments
     results = [] + self.comments
-    results.map{|comment| ({id: comment.id, post_id: comment.post_id, user_id: comment.user_id, body: comment.body, username: comment.user.username}) }
+    results.map{|comment| ({id: comment.id, post_id: comment.post_id, user_id: comment.user_id, body: comment.body, username: comment.user.username, created_at: comment.created_at.to_s.slice(0,10)}) }
   end
 
   def total_points
@@ -29,7 +29,7 @@ class Post < ActiveRecord::Base
   end
 
   def num_comments
-    self.comments.count
+    self.comments ? self.comments.count : 0
   end
 
 

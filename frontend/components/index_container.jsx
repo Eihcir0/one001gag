@@ -4,7 +4,8 @@ import {requestPosts}
   from './../actions/posts_actions';
 
 const mapStateToProps = state => ({
-  posts: state.posts
+  posts: state.posts,
+  filter: state.filter.filter
 });
 
 const mapDispatchToProps = dispatch => ({

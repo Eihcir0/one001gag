@@ -9,7 +9,8 @@ class Navbar extends React.Component {
     super(props);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleUploadClick = this.handleUploadClick.bind(this);
-    this.handleCloseModal = this.handleUploadClick.bind(this);
+    this.handleHotButton = this.handleHotButton.bind(this);
+    this.handleFreshButton = this.handleFreshButton.bind(this);
     this.state = {modalOpen: false};
   }
 
@@ -35,6 +36,17 @@ class Navbar extends React.Component {
     this.setState({modalOpen: true});
   }
 
+  handleHotButton() {
+    if (!(this.props.filter==="HOT")) {
+      this.props.receiveFilter("HOT");
+    }
+  }
+  handleFreshButton() {
+    if (!(this.props.filter==="FRESH")) {
+      this.props.receiveFilter("FRESH");
+    }
+  }
+
 
   render() {
     return (
@@ -43,12 +55,14 @@ class Navbar extends React.Component {
           <a className="header-link" href="#/">
             <img className="title-logo-navbar" src="http://res.cloudinary.com/one001gag/image/upload/v1472693768/0ne001gaglogo_ezwrht.png"/>
           </a>
-          <button className="hot-button" name="hot button">Hot
+          <button className={this.props.filter!=="HOT" ? "hot-button" : "hot-button-selected"} name="hot button" onClick={this.handleHotButton}>Hot
           </button>
-          <button className="fresh-button" name="fresh button">Fresh
+          <button className={this.props.filter!=="FRESH" ? "fresh-button" : "fresh-button-selected"} name="fresh button" onClick={this.handleFreshButton}  >Fresh
           </button>
+
         </div>
         <div className="right-side-container">
+          {this.props.currentUser.username}
           <button onClick={this.handleLogout}
             className="logout-button" name="logout-button">
             log out

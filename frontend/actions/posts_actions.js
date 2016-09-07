@@ -18,20 +18,25 @@ export const destroyVote = (data) => ({
   vote: data
 });
 
+export const updateVote = (data) => ({
+  type: "UPDATE_VOTE",
+  vote: data
+});
+
 export const requestPosts = () => ({
   type: "REQUEST_POSTS",
 });
 
-export const receivePosts = (data) => ({
-  type: "RECEIVE_POSTS",
-  posts: data
-});
 
 export const requestPost = (postId) => ({
   type: "REQUEST_POST",
   postId
 });
 
+export const receivePosts = (data) => ({
+  type: "RECEIVE_POSTS",
+  posts: data
+});
 export const receivePost = (data) => ({
   type: "RECEIVE_POST",
   post: data

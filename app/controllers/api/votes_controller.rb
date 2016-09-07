@@ -4,18 +4,31 @@ class Api::VotesController < ApplicationController
     @vote = Vote.new(vote_params)
     @vote.user_id = current_user.id
     if @vote.save
-      render json: @vote.post
+      @post = @vote.post
+      render "/api/posts/show"
     else
       render json: @vote.errors.full_messages, status: 422
     end
   end
 
 
-    def destroy
-      @vote = Vote.find(params[:vote][:id])
-      @vote.destroy
-      render json: @vote.post
+  def update
+    @vote = Vote.find_by_id(params[:id])
+    if @vote.update(vote_params)
+      @post = @vote.post
+      render "/api/posts/show"
+    else
+      render(json: @vote.errors.full_messages, status: 422)
     end
+  end
+
+
+  def destroy
+    @vote = Vote.find(params[:vote][:id])
+    @vote.destroy
+    @post = @vote.post
+    render "/api/posts/show"
+  end
 
 
   def vote_params

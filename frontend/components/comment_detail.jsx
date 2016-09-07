@@ -10,7 +10,7 @@ class CommentDetail extends React.Component {
     return (
       <li className="commentDetailItem">
         <span className="commentorName">
-          {this.props.comment.username}: </span>
+          {this.props.comment.username} on {this.props.comment.created_at}: </span>
         <br/>
 
         <span className="commentBody">

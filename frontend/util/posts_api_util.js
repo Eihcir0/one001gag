@@ -50,3 +50,12 @@ export const destroyVote = (vote, success) => {
     success
   });
 };
+
+export const updateVote = (vote, success) => {
+  $.ajax({
+    type: "PATCH",
+    url: `api/votes/${vote.id}`,
+    data: {vote: vote},
+    success
+  });
+};

@@ -28,12 +28,17 @@ export const PostsMiddleware = ({getState, dispatch}) => next => action => {
       return next(action);
 
     case "DESTROY_VOTE":
-    successCallback = data => dispatch(Actions.receivePost(data));
-    API.destroyVote(action.vote, successCallback);
-    return next(action);
+      successCallback = data => dispatch(Actions.receivePost(data));
+      API.destroyVote(action.vote, successCallback);
+      return next(action);
+
+    case "UPDATE_VOTE":
+      successCallback = data => dispatch(Actions.receivePost(data));
+      API.updateVote(action.vote, successCallback);
+      return next(action);
 
     case "CREATE_VOTE":
-      successCallback = data => dispatch(Actions.receivePost(data));
+      successCallback = (data) => dispatch(Actions.receivePost(data));
       API.createVote(action.vote, successCallback);
       return next(action);
 

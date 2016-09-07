@@ -25,25 +25,33 @@ class IndexInfoItem extends React.Component {
   handleUpVoteButton () {
     let vote;
     if (this.currentUserDownvote()) {
-      vote = {id: this.currentUserVote().id};
-      this.props.destroyVote(vote);
+      vote = {id: this.currentUserVote().id, vote_value: 1};
+      this.props.updateVote(vote);
     }
     else if (!this.currentUserUpvote()) {
       vote = {post_id: this.props.post.id, vote_value: 1};
       this.props.createVote(vote);
     }
-
+    else if (this.currentUserUpvote()) {
+      vote = {id: this.currentUserVote().id};
+      this.props.destroyVote(vote);
+    }
   }
 
   handleDownVoteButton () {
     let vote;
     if (this.currentUserUpvote()) {
-      vote = {id: this.currentUserVote().id};
-      this.props.destroyVote(vote);
+      vote = {id: this.currentUserVote().id, vote_value: -1};
+      this.props.updateVote(vote);
+
     } else if (!this.currentUserDownvote())   {
       vote = {post_id: this.props.post.id, vote_value: -1};
       console.log("createUpVote");
       this.props.createVote(vote);
+    }
+    else if (this.currentUserDownvote()) {
+      vote = {id: this.currentUserVote().id};
+      this.props.destroyVote(vote);
     }
   }
 

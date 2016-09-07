@@ -42,6 +42,7 @@ class IndexDetail extends React.Component {
     let comments = post.all_comments.map((comment) => (
       <CommentDetail key={comment.id} comment={comment}/>
     ));
+    comments = comments.slice(0).reverse();
     let postKeys = Object.keys(this.props.posts.posts);
     let lastOne = postKeys[postKeys.length - 1] == post.id;
     return (
