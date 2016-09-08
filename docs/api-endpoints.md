@@ -28,10 +28,13 @@
 - `GET /api/post/:id`
   - calculates total UpVotes/DownVotes and total comments
   - new comment form
-  - shows nested comments index
 
 ### Comments
 
 - `POST /api/post/:id/comments`
-- `GET /api/post/:id/comments`
-  - index of all comments for a post
+
+### Votes
+
+- `POST /api/votes/:id`
+- `PATCH /api/votes/:id`
+- `DELETE /api/votes/:id`

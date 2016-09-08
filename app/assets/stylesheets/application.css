@@ -1,5 +1,18 @@
 @import url("normalize.css");
 
+@keyframes guest_spin {
+  0% {
+
+  }
+  90% {
+
+  }
+  100% {
+
+    transform: rotate(1080deg);
+  }
+}
+
 @keyframes memes_in {
   0% {
     transform: scale(0.1);
@@ -189,6 +202,7 @@ button {
   border: none;
   padding-left: 10px;
   margin: 0;
+  box-shadow: 3px 5px 21px black;
 
 }
 
@@ -207,10 +221,11 @@ button {
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 20px solid red;
+
 }
 
 .login-form {
-  background-color: #ffffcc;
+  background-color: white;
 }
 .home-container {
   height: 1000px;
@@ -257,6 +272,7 @@ button {
 }
 
 .guest-in-button {
+  animation-delay: 3.5s;
   transition: all 0.3s ease;
   display: block;
   margin: 0 auto;
@@ -264,28 +280,35 @@ button {
   padding: 12px 18px;
   font-size: 14px;
   border-radius: 4px;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: guest_spin;
+  position: absolute;
+  margin: 2% 0% 0% 32%;
+  }
+
+
 }
 
-.guest-in-button:hover {
-  padding: 24px 36px;
-  border-radius: 30px;
-  background-color: #5DFC0A;
-  transform: rotate(1080deg);
-}
 
 
 .button-container {
-  text-align: right;
-  margin-top: 12px;
-
+  /*text-align: right;*/
+  padding-left: 100px;
+  display: flex;
 }
 
 .button-container button {
   display: inline-block;
+  margin-top: 20px;
+  align-content: space-around;
+
+
 }
 
 .login-button {
   margin-right: 10px;
+  margin-left: 150px;
 }
 
 
@@ -298,7 +321,6 @@ button {
 
 .index-item-title {
   text-align: left;
-  padding-top: 30px;
 }
 .index-item-list {
   display: inline-block;
@@ -309,6 +331,7 @@ button {
 .index-item-li-container {
   width: 80%;
   padding-left: 70px;
+  margin-top: 69px;
 }
 .title-logo {
   animation-duration: 3.6s;
@@ -454,6 +477,7 @@ button:hover, input[type="submit"]:hover {
   border-radius: 8px;
   background-color: #3399ff;
   color: white;
+  box-shadow: 3px 5px 21px black;
 }
 
 .post-comment-button:hover {
@@ -559,20 +583,13 @@ border-radius: 3px;
 }
 
 
-.comment-button {
-  color: blue;
-  font-weight: bold;
-  background-color:  #ffffcc;;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2px 14px;
-  box-shadow: 0px 4px 4px black;
-}
-
-.login-form, .guest-in-button, .open-meme4,  {
+.guest-in-button, .open-meme4  {
   box-shadow: 5px 10px 20px black;
 }
 
+.login-form {
+  box-shadow: 5px 10px 20px black;
+}
 .whole-bar-container  {
   box-shadow: 5px 6px 46px black;
 }
@@ -599,8 +616,9 @@ border-radius: 3px;
   font-size: 12px;
   color: white;
   border-top: none;
-  border-bottom: none;
   border-left: none;
+  border-bottom: 2px inset whitesmoke;
+  border-right: 2px inset whitesmoke;
 }
 
 
@@ -611,9 +629,7 @@ border-radius: 3px;
   background-color: black;
   font-size: 12px;
   color: white;
-  border-top: none;
-  border-bottom: none;
-  border-left: none;
+  border: none;
 }
 
 .hot-button:hover, .fresh-button:hover {
@@ -644,20 +660,20 @@ border-radius: 3px;
 
 
 .normalVoteButton, .hasVotedOtherButton  {
-    width: 78px;
-    height: 32px;
+    width: 80px;
+    height: 34px;
     background-color: black;
     border: 1px solid darkgrey;
     margin-right: 7px;
     color: lime;
     border: 1px solid black;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 3px 5px 21px black;
     top: 0px;
     border: 1px 0px 0px 1px solid white;
     border-top: 1px transparent whitesmoke;
     border-left: 1px outset whitesmoke;
-    padding-bottom: 24px;
+    padding-bottom: 29px;
     border-top: 1px outset whitesmoke;
 }
 
@@ -673,8 +689,47 @@ border-radius: 3px;
 
 }
 
+.hasVotedVoteButton  {
+    width: 80px;
+    height: 32px;
+    background-color: #1a1a1a;
+    margin-right: 7px;
+    color: green;
+    border-radius: 5px;
+    box-shadow: 3px 5px 21px black;
+    top: 0px;
+    padding-bottom: 29px;
+    border-bottom: 1px inset lightgrey;
+    border-right: 1px inset lightgrey;
+    border-top: 1px inset darkgrey;
+    border-left: 1px inset darkgrey;
+}
+
 .hasVotedVoteButton:hover {
   filter: brightness(75%);
   background-color: dimgrey;
 
 }
+
+.comment-button {
+  color: lime;
+  font-weight: bold;
+  background-color:  black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 19px 7px 19px;
+
+  box-shadow: 3px 5px 21px black;
+
+}
+
+.comment-text-input {
+  box-shadow: 3px 5px 21px black;
+}
+
+/*.guest-in-button:hover {
+  padding: 24px 36px;
+  border-radius: 30px;
+  background-color: #5DFC0A;
+
+}*/

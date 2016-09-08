@@ -14,7 +14,7 @@ export const home = () => (
 
       <img className="open-meme3" src="http://res.cloudinary.com/one001gag/image/upload/c_scale,w_600/v1473223637/1-hour-code_cetpiy.jpg" />
 
-      <img className="open-meme4" src="http://res.cloudinary.com/one001gag/image/upload/c_scale,h_450,w_600/v1472693768/0ne001gaglogo_ezwrht.png" />
+      <img className="open-meme4" src="http://res.cloudinary.com/one001gag/image/upload/c_scale,h_450,w_600/v1473307648/NEW0ne001gaglogo_ezwrht_tyfh7n.png" />
 
 
       <SessionContainer/>

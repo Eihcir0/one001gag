@@ -30,6 +30,7 @@ class Navbar extends React.Component {
 		if (this.props.currentUser){
 			hashHistory.push("/login");
 		}
+
 	}
 
   handleUploadClick() {
@@ -40,11 +41,13 @@ class Navbar extends React.Component {
     if (!(this.props.filter==="HOT")) {
       this.props.receiveFilter("HOT");
     }
+    hashHistory.push("/");
   }
   handleFreshButton() {
     if (!(this.props.filter==="FRESH")) {
       this.props.receiveFilter("FRESH");
     }
+    hashHistory.push("/");
   }
 
 
@@ -53,7 +56,7 @@ class Navbar extends React.Component {
       <div className="whole-bar-container">
         <div className="left-side-container">
           <a className="header-link" href="#/">
-            <img className="title-logo-navbar" src="http://res.cloudinary.com/one001gag/image/upload/v1472693768/0ne001gaglogo_ezwrht.png"/>
+            <img className="title-logo-navbar" src="http://res.cloudinary.com/one001gag/image/upload/c_crop,h_229,w_343/v1472693768/0ne001gaglogo_ezwrht.png"/>
           </a>
           <button className={this.props.filter!=="HOT" ? "hot-button" : "hot-button-selected"} name="hot button" onClick={this.handleHotButton}>Hot
           </button>

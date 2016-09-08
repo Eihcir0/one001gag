@@ -4,6 +4,7 @@ import {requestPosts, createComment} from './../actions/posts_actions';
 
 const mapStateToProps = state => ({
   posts: state.posts
+
 });
 
 const mapDispatchToProps = dispatch => ({

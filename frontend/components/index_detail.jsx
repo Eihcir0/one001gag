@@ -34,6 +34,39 @@ class IndexDetail extends React.Component {
 
   }
 
+  commentBody() {
+    
+    if (this.props.comment) {
+      return (
+    <div className="comment-body">
+      <input autoFocus type="text"
+
+        className="comment-text-input"
+        ref="body"
+        cols='60'
+        placeholder = "Write comment..."
+        value={this.state.commentBody}
+        rows='5'
+        onChange={this.update('commentBody')}></input>
+    </div>
+  );}
+  else {
+    return (
+      <div className="comment-body">
+        <input type="text"
+
+          className="comment-text-input"
+          ref="body"
+          cols='60'
+          placeholder = "Write comment..."
+          value={this.state.commentBody}
+          rows='5'
+          onChange={this.update('commentBody')}></input>
+      </div>
+    );
+  }
+  }
+
   render() {
     let post = this.props.posts.posts[this.props.params.id];
 
@@ -52,17 +85,7 @@ class IndexDetail extends React.Component {
             <IndexItemShow lastPost={lastOne} key={post.id} post={post} />
             <div className="create-post-form">
                 <form onSubmit={this.handleCommentSubmit} className="new-comment-form" >
-                  <div className="comment-body">
-                    <input type="text"
-
-                      className="comment-text-input"
-                      ref="body"
-                      cols='60'
-                      placeholder = "Write comment..."
-                      value={this.state.commentBody}
-                      rows='5'
-                      onChange={this.update('commentBody')}></input>
-                  </div>
+                  {this.commentBody()}
                   <button type="submit" className="post-comment-button" >
                     Post
                   </button>

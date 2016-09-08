@@ -16,6 +16,8 @@ class IndexInfoItem extends React.Component {
   }
 
   handleCommentButtonClick() {
+
+
       hashHistory.push(
         `/posts/${(parseInt(this.props.post.id))}`);
 
@@ -90,6 +92,7 @@ class IndexInfoItem extends React.Component {
     </button>
   );} else {return (<span/>);}
   }
+  
   render() {
     let points =
     (this.props.post.total_points===null ? 0 : this.props.post.total_points);

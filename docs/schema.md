@@ -21,6 +21,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
+post_id     | integer   | not null, foreign key (references users), indexed
 content     | text     | not null
 
 ## votes
@@ -28,5 +29,5 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
-voteable_id     | integer   | not null, foreign_key (polymorphic references comment or post)
+post_id     | integer   | not null, foreign_key (polymorphic references comment or post)
 vote | integer | not null, (1 for upvote, -1 for downvote)
