@@ -155,10 +155,7 @@
 }
 
 body {
-  /*width: 900px;*/
   font-family: 'Exo 2', sans-serif;
-  /*background-color: inherit;*/
-  background-color: ;
   margin: 0;
 }
 
@@ -216,7 +213,6 @@ button {
   background-color: #ffffcc;
 }
 .home-container {
-  /*background-image: url("https://media.giphy.com/media/A06UFEx8jxEwU/giphy.gif");*/
   height: 1000px;
   display: flex;
   justify-content: space-between;
@@ -234,11 +230,7 @@ button {
   animation-duration: 0.5s;
   animation-name: bounceIn;
   animation-fill-mode: forwards;
-
-
   display: inline-block;
-
-  /*width: 40%;*/
 }
 
 .login-form-box {
@@ -253,9 +245,6 @@ button {
   margin-bottom: 23px;
 }
 
-.login-form label {
-  /*display: block;*/
-}
 
 .login-form label span {
   width: 70px;
