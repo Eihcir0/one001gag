@@ -386,36 +386,6 @@ button:hover, input[type="submit"]:hover {
   margin-top: 0px;
   border: none;
 }
-
-.hot-button {
-  vertical-align: center;
-  padding-left: 18px;
-  padding-right: 15px;
-  background: black;
-  font-size: 12px;
-  color: white;
-  border-top: none;
-  border-bottom: none;
-  border-left: none;
-}
-
-.hot-button:hover {
-  background-color: darkgrey;
-}
-
-.fresh-button {
-  vertical-align: center;
-  border-top: none;
-  border-bottom: none;
-  background: black;
-  font-size: 12px;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: white;
-}
-.fresh-button:hover {
-  background-color: darkgrey;
-}
 .logout-button {
   vertical-align: center;
   background: black;
@@ -437,17 +407,6 @@ button:hover, input[type="submit"]:hover {
 }
 .left-side-container {
   display: flex;
-}
-.upload-button {
-  font-size: 12px;
-  padding: 3;
-  margin-left: 10px;
-  vertical-align: center;
-  height: 100%;
-  background: #3399ff;
-  color: white;
-  border: 1px solid darkgrey;
-  border-radius: 7px;
 }
 
 .title-logo-home {
@@ -610,70 +569,6 @@ border-radius: 3px;
   padding-bottom: 20px;
 }
 
-.normalVoteButton {
-  width: 78px;
-  height: 32px;
-  background-color:  #ffffcc;
-  border: 1px solid darkgrey;
-  margin-right: 7px;
-  color: blue;
-  border: 1px solid black;
-  border-radius: 3px;
-  box-shadow: 0px 4px 4px black;
-  top: 0px;
-
-}
-
-.hasVotedVoteButton {
-  width: 78px;
-  height: 32px;
-  background-color:  #ffffcc;
-  margin-right: 7px;
-  border-radius: 3px;
-  box-shadow: 0px 2px 2px black;
-
-
-  background-color:  #ffffcc;;
-  color: grey;
-  border: 1px solid black;
-  filter: brightness(75%);
-  top: 1px;
-}
-
-.hasVotedVoteButton:hover {
-  filter: brightness(75%);
-
-}
-.hasVotedOtherButton {
-  position: absolute;
-  width: 78px;
-  height: 32px;
-  background-color:  #ffffcc;;
-  border: 1px solid darkgrey;
-  padding: 6px 14px;
-  margin-right: 10px;
-  color: grey;
-  border: 1px solid black;
-  border-radius: 3px;
-  box-shadow: 0px 4px 4px black;
-  position: relative;
-  top: 0px;
-  transition: all ease 0.3s;
-}
-
-.hasVotedOtherButton:hover {
-  background-color:  #ffffcc;;
-  border: 1px solid darkgrey;
-  padding: 6px 14px;
-  color: grey;
-  border: 1px solid black;
-  border-radius: 3px;
-  box-shadow: 0px 3px 0px black;
-  position: relative;
-  top: 0px;
-  transition: all ease 0.3s;
-}
-
 
 .comment-button {
   color: blue;
@@ -683,4 +578,114 @@ border-radius: 3px;
   border-radius: 5px;
   padding: 2px 14px;
   box-shadow: 0px 4px 4px black;
+}
+
+.login-form, .guest-in-button, .open-meme4,  {
+  box-shadow: 5px 10px 20px black;
+}
+
+.whole-bar-container  {
+  box-shadow: 5px 6px 46px black;
+}
+.login-button, .sign-up-button {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px black;
+
+}
+
+.login-input {
+  margin: 6px auto;
+  border: 1px solid grey;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px black;
+}
+
+
+.hot-button-selected, .fresh-button-selected {
+  vertical-align: center;
+  padding-left: 18px;
+  padding-right: 15px;
+  background-color: #C7C3C3;
+  font-size: 12px;
+  color: white;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+
+.hot-button, .fresh-button {
+  vertical-align: center;
+  padding-left: 18px;
+  padding-right: 15px;
+  background-color: black;
+  font-size: 12px;
+  color: white;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.hot-button:hover, .fresh-button:hover {
+  background-color:  #C7C3C3;
+  filter: brightness(85%);
+}
+
+.fresh-button:hover {
+  background-color: #C7C3C3;
+  filter: brightness(85%);
+}
+
+.user-name {
+  margin-right: 20px;
+  font-weight: bolder;
+}
+
+.upload-button {
+  font-size: 12px;
+  padding: 3;
+  margin-left: 10px;
+  vertical-align: center;
+  height: 100%;
+  background: #3399ff;
+  color: white;
+  border-radius: 7px;
+}
+
+
+.normalVoteButton, .hasVotedOtherButton  {
+    width: 78px;
+    height: 32px;
+    background-color: black;
+    border: 1px solid darkgrey;
+    margin-right: 7px;
+    color: lime;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 3px 5px 21px black;
+    top: 0px;
+    border: 1px 0px 0px 1px solid white;
+    border-top: 1px transparent whitesmoke;
+    border-left: 1px outset whitesmoke;
+    padding-bottom: 24px;
+    border-top: 1px outset whitesmoke;
+}
+
+.hasVotedOtherButton:hover {
+  filter: brightness(75%);
+  background-color: dimgrey;
+
+}
+
+.normalVoteButton:hover {
+  filter: brightness(75%);
+  background-color: dimgrey;
+
+}
+
+.hasVotedVoteButton:hover {
+  filter: brightness(75%);
+  background-color: dimgrey;
+
 }
