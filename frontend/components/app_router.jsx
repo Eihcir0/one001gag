@@ -33,7 +33,7 @@ class AppRouter extends React.Component{
 
   render(){
     return(
-      <Router  history={ hashHistory }>
+      <Router onUpdate={() => window.scrollTo(0, 0)}  history={ hashHistory }>
        <Route path="/" component={ App }>
          <IndexRoute component={ indexContainer } onEnter={ this._ensureLoggedIn } />
 
