@@ -184,6 +184,7 @@ button {
   margin: 10 px;
   color: #222020;
   padding: 6px;
+  font-size: 14px;
 }
 .parent-info-item {
   display: flex;
