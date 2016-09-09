@@ -29,13 +29,13 @@ class IndexDetail extends React.Component {
 
     this.props.createComment(comment);
     this.setState({commentBody: ""});
-    this.props.requestPosts();
+    
 
 
   }
 
   commentBody() {
-    
+
     if (this.props.comment) {
       return (
     <div className="comment-body">

@@ -208,7 +208,7 @@ button {
   justify-content: space-between;
   margin: 0 autos;
   background-image: url("http://res.cloudinary.com/one001gag/image/upload/v1473208302/matrix-3d-desktop-wallpaper_yudzvz.jpg");
-  background-size: 100%;
+  background-repeat: repeat-x;
 }
 
 .login-form-container {
@@ -287,7 +287,6 @@ button {
   padding-top: 30px;
 }
 .index-item-list {
-  display: inline-block;
   display: inline-block;
   width: 75%;
 }

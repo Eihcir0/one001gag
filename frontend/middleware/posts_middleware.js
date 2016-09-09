@@ -23,7 +23,7 @@ export const PostsMiddleware = ({getState, dispatch}) => next => action => {
       return next(action);
 
     case "CREATE_COMMENT":
-      successCallback = data => window.scrollTo(0,document.body.scrollHeight);
+      successCallback = data => dispatch(Actions.receivePost(data));
       API.createComment(action.comment, successCallback);
       return next(action);
 

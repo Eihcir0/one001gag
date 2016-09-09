@@ -65,7 +65,7 @@ class Navbar extends React.Component {
 
         </div>
         <div className="right-side-container">
-          <span className="user-name">{this.props.currentUser.username}</span>
+          <span className="user-name">{this.props.currentUser ? this.props.currentUser.username : ""}</span>
           <button onClick={this.handleLogout}
             className="logout-button" name="logout-button">
             log out
