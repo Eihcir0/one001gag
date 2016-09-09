@@ -2,7 +2,7 @@
 
 [one001gag live][heroku]
 
-[heroku]: http://one001gag.herokuapp.com/
+[heroku]: http://www.one001gag.com/
 
 What is one001gag?
  - full-stack, `single-page` web application

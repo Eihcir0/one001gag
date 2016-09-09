@@ -31,5 +31,10 @@ module One001gag
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    Dynopoker.configure do |config|
+    config.address = 'http://wakemydyno.com'
+      #  config.enable = false # default is true
+      #  config.poke_frequency = 123 # default is 1800s (30min)
+    end
   end
 end
