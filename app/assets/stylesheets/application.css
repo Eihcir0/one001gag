@@ -164,7 +164,7 @@
 * {
   position: relative;
   box-sizing: border-box;
-
+  outline: 0;
 }
 
 body {
@@ -188,11 +188,14 @@ button {
 .parent-info-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
 .cool-button {
   display: flex;
-  border: none
+  border: none;
+  margin-top: 3px;
 }
 
 .next-button {
@@ -236,7 +239,7 @@ button {
   background: black;
   margin: 0 autos;
   background-image: url("http://res.cloudinary.com/one001gag/image/upload/v1473208302/matrix-3d-desktop-wallpaper_yudzvz.jpg");
-  background-size: 120%;
+  background-size: cover;
   background-repeat: no-repeat;
 
 }
@@ -248,18 +251,16 @@ button {
   animation-name: bounceIn;
   animation-fill-mode: forwards;
   display: inline-block;
+  margin-top: 18%;
+  margin-left: 60%;
 }
 
-.login-form-box {
-  margin-left: 861px;
-  margin-top: 257px;
-
-}
 
 .login-form {
   border: 1px solid #aaa;
   padding: 30px;
   margin-bottom: 23px;
+
 }
 
 
@@ -405,8 +406,8 @@ button:hover, input[type="submit"]:hover {
   background: black;
   font-size: 12px;
   color: white;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   border-top: none;
   border-bottom: none;
 }
@@ -475,8 +476,8 @@ button:hover, input[type="submit"]:hover {
   margin-top: 15px;
   position: absolute;
   right: 25%;
-  border-radius: 8px;
-  background-color: #3399ff;
+  border-radius: 3px;
+  background-color: limegreen;
   color: white;
   box-shadow: 3px 5px 21px black;
 }
@@ -532,7 +533,6 @@ border-radius: 3px;
   border-radius: 3px;
 }
 .upload-image {
-  border: 1px solid grey;
   vertical-align: middle;
   width: 50%;
 
@@ -542,9 +542,9 @@ border-radius: 3px;
   top: 0;
   vertical-align: top;
   padding: 20px;
-  width: 67%;
+  width: 69%;
   height: 60px;
-  margin-left: 6%;
+  margin-left: 5%;
 }
 
 .commentDetailItem {
@@ -574,6 +574,7 @@ border-radius: 3px;
 
 .comments-list {
   margin-bottom: 150px;
+  margin-left: 2%;
 }
 
 
@@ -619,8 +620,6 @@ border-radius: 3px;
   color: white;
   border-top: none;
   border-left: none;
-  border-bottom: 2px inset whitesmoke;
-  border-right: 2px inset whitesmoke;
 }
 
 
@@ -651,13 +650,12 @@ border-radius: 3px;
 
 .upload-button {
   font-size: 12px;
-  padding: 3;
-  margin-left: 10px;
+  padding: 13px;
   vertical-align: center;
   height: 100%;
-  background: #3399ff;
+  background: limegreen;
   color: white;
-  border-radius: 7px;
+  border: none;
 }
 
 
@@ -673,10 +671,7 @@ border-radius: 3px;
     box-shadow: 3px 5px 21px black;
     top: 0px;
     border: 1px 0px 0px 1px solid white;
-    border-top: 1px transparent whitesmoke;
-    border-left: 1px outset whitesmoke;
     padding-bottom: 29px;
-    border-top: 1px outset whitesmoke;
 }
 
 .hasVotedOtherButton:hover {
@@ -701,10 +696,6 @@ border-radius: 3px;
     box-shadow: 3px 5px 21px black;
     top: 0px;
     padding-bottom: 29px;
-    border-bottom: 1px inset lightgrey;
-    border-right: 1px inset lightgrey;
-    border-top: 1px inset darkgrey;
-    border-left: 1px inset darkgrey;
 }
 
 .hasVotedVoteButton:hover {
